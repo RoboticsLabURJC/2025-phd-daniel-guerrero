@@ -133,8 +133,7 @@ Este proyecto busca abordar estos problemas mediante un robot forestal autónomo
 - **Simulación:** Gazebo, CARLA, Open3DE.  
 - **Frameworks de IA:** PyTorch, TensorFlow.  
 - **Navegación:** ROS2 (Robot Operating System).  
-- **Visualización:** RViz o Foxglove.  
-- **GIS:** QGIS para el análisis geoespacial.  
+- **Visualización:** RViz o Foxglove.
 
 ---
 
