@@ -1,122 +1,149 @@
-# Sistema de Navegación Autónoma para Robots Agrícolas Basado en Algoritmos de IA y Simulación: Enfoque en Control de Extremo a Extremo
+# Sistema Autónomo para la Exploración Forestal: Detección de Incendios, Monitoreo del Suelo, Recuperación Ecológica y Vigilancia de la Biodiversidad con IA
 
 ---
 
 ## Resumen
-Este proyecto propone el desarrollo de un sistema de navegación autónoma para robots agrícolas, utilizando algoritmos de inteligencia artificial (IA) y simuladores avanzados, con la intención de probarlo posteriormente en un robot físico. El enfoque se centrará en la creación de un entorno de simulación robusto para probar y optimizar algoritmos de navegación antes de la implementación en el robot real. 
+Este proyecto propone el desarrollo de un sistema autónomo para la exploración forestal, combinando cuatro funcionalidades clave:  
+1. **Detección y prevención temprana de incendios forestales** mediante sensores térmicos, cámaras RGB-D, procesamiento de imágenes y algoritmos de IA.  
+2. **Mapeo y monitoreo del suelo** para analizar la salud ecológica del bosque, evaluando parámetros como pH, humedad y temperatura.  
+3. **Recuperación ecológica simulada**, donde el robot evaluará zonas degradadas, determinará el tipo de sustrato necesario para la recuperación del suelo y generará mapas de intervención.  
+4. **Vigilancia de la biodiversidad**, detectando amenazas como la tala clandestina, la presencia de enfermedades en la flora y la evaluación continua de zonas reforestadas para garantizar la salud de los árboles.  
 
-El sistema permitirá al robot moverse de manera autónoma en entornos agrícolas complejos, evadiendo obstáculos, optimizando rutas y adaptándose a condiciones cambiantes. Incluirá sensores de temperatura, pH y humedad para interactuar con el suelo, proporcionando información sobre los nutrientes necesarios. 
+El sistema se desarrollará en simuladores avanzados (**Gazebo, CARLA y Open3DE**), permitiendo probar y optimizar los algoritmos de navegación, detección y análisis del terreno en entornos forestales complejos.  
 
-Además, el robot tendrá la funcionalidad de recuperación de zonas ecológicas, facilitando tareas como la siembra automatizada, la reforestación o la detección de suelos degradados. El proyecto se llevará a cabo en 3 años y contribuirá significativamente al campo de la robótica agrícola, la IA aplicada y la sostenibilidad ambiental.
+El proyecto tendrá un enfoque en la sostenibilidad ambiental, la conservación ecológica y la protección contra desastres naturales.
 
 ---
 
 ## Objetivos
 
 ### Objetivo General
-Desarrollar un sistema de navegación autónoma para robots agrícolas basado en IA y simulación, con un enfoque en control de extremo a extremo, validando posteriormente el sistema en un robot físico.
+Desarrollar un sistema autónomo para la exploración forestal que combine la detección temprana de incendios, el monitoreo del suelo, la evaluación de zonas degradadas para la recuperación ecológica y la vigilancia de la biodiversidad, validando su desempeño en simuladores avanzados.
 
 ### Objetivos Específicos
-1. Implementar un algoritmo de percepción ya existente para la detección de obstáculos y cultivos en el entorno simulado.  
-2. Diseñar un sistema de control de navegación que integre planificación de rutas, evasión de obstáculos y toma de decisiones en tiempo real.  
-3. Crear un simulador virtual que modele diferentes entornos agrícolas (campos abiertos, invernaderos, terrenos irregulares).  
-4. Desarrollar algoritmos de aprendizaje por refuerzo para mejorar la adaptabilidad del robot a condiciones cambiantes.  
-5. Validar el sistema en el simulador y, en la fase final, probarlo en un robot físico.  
-6. Incluir sensores de temperatura, pH y humedad para interactuar con el suelo, proporcionando información sobre nutrientes necesarios.  
-7. Incorporar funcionalidades para la recuperación de zonas ecológicas, como la detección de suelos degradados o la siembra automatizada.  
-8. Comparar el rendimiento del sistema con otros métodos de navegación autónoma.  
+1. Diseñar un sistema de navegación autónoma basado en **SLAM 3D** para la exploración de entornos forestales irregulares.  
+2. Integrar un módulo de detección de incendios con **sensores térmicos, cámaras RGB-D e IA** para identificar puntos calientes o riesgos de combustión.  
+3. Implementar un sistema de monitoreo del suelo con sensores de **pH, humedad y temperatura**, generando mapas georreferenciados.  
+4. Incorporar un módulo de **recuperación ecológica** que detecte zonas forestales degradadas y analice el tipo de sustrato necesario para su restauración.  
+5. Desarrollar un sistema de **vigilancia de la biodiversidad** para detectar problemas como:  
+    - Tala clandestina.  
+    - Enfermedades visibles en la flora.  
+    - Detección de cambios en la cobertura vegetal.  
+    - Monitoreo continuo de zonas reforestadas para garantizar la salud de los árboles.  
+6. Validar el desempeño del robot en simuladores avanzados (Gazebo, CARLA y Open3DE), evaluando la precisión de navegación, detección de incendios, monitoreo del suelo y vigilancia de la biodiversidad.  
+7. Comparar el rendimiento del sistema con otras tecnologías de monitoreo ambiental en simulación.  
 
 ---
 
 ## Justificación
-La agricultura moderna enfrenta múltiples desafíos relacionados con la eficiencia, el costo laboral, la precisión y el impacto ambiental. La automatización de tareas mediante robots agrícolas es clave para resolver estos problemas. Sin embargo, muchos sistemas actuales tienen limitaciones en cuanto a su capacidad de navegación autónoma en entornos dinámicos y no estructurados.
+Los incendios forestales, la degradación del suelo, la tala ilegal y la propagación de enfermedades vegetales representan amenazas graves para los ecosistemas, reduciendo la biodiversidad y afectando la capacidad de recuperación del bosque. Además, las zonas reforestadas requieren un monitoreo continuo para garantizar la supervivencia de los árboles jóvenes y el éxito de la restauración.
 
-El desarrollo de un sistema de navegación autónoma basado en IA permitirá:  
-- Optimizar la gestión de cultivos, automatizando tareas repetitivas como el monitoreo, la fumigación o la recolección.  
-- Aumentar la eficiencia operativa, reduciendo la necesidad de intervención humana y disminuyendo los errores.  
-- Mejorar la sostenibilidad al optimizar rutas, reduciendo el consumo de combustible o energía y minimizando la compactación del suelo.  
-- Facilitar la escalabilidad, ya que los robots autónomos podrán operar en grandes extensiones agrícolas sin necesidad de supervisión constante.  
-- Proporcionar información valiosa sobre la salud del suelo mediante sensores de temperatura, pH y humedad, ayudando a optimizar la gestión de nutrientes y a prevenir deficiencias.  
-- Contribuir a la recuperación de zonas ecológicas, permitiendo la siembra de especies nativas, la restauración de áreas degradadas o la detección automatizada de suelos dañados.  
-
-La validación del sistema en un robot físico permitirá demostrar la viabilidad del proyecto en condiciones reales, cerrando la brecha entre la simulación y la implementación práctica.
+Este proyecto busca abordar estos problemas mediante un robot forestal autónomo capaz de:  
+- **Prevenir incendios** al identificar puntos calientes tempranamente.  
+- **Monitorear la salud del suelo**, facilitando la toma de decisiones para la conservación ecológica.  
+- **Identificar zonas degradadas**, generando mapas de intervención para la recuperación del terreno.  
+- **Detectar actividades ilegales** como la tala clandestina o la pérdida repentina de vegetación.  
+- **Identificar enfermedades visibles** en la flora mediante IA.  
+- **Garantizar la salud de las zonas reforestadas**, evaluando la supervivencia de los árboles jóvenes.  
+- **Optimizar la gestión forestal** mediante la automatización, reduciendo costos operativos.  
+- **Facilitar la exploración en zonas de difícil acceso**, aumentando la cobertura de monitoreo.  
 
 ---
 
 ## Metodología
 
 ### Fase 1: Revisión del Estado del Arte (3 meses)
-- Análisis de algoritmos de percepción existentes y su integración en sistemas de navegación.  
-- Estudio de técnicas de navegación autónoma (SLAM, planificación de rutas, evasión de obstáculos).  
-- Identificación de herramientas de simulación (Gazebo, Open3DEngine, Carla).  
+- Análisis de técnicas de navegación autónoma en entornos forestales.  
+- Estudio de sistemas de detección de incendios con visión térmica.  
+- Revisión de tecnologías para la medición del suelo (pH, humedad, temperatura) y análisis de sustratos.  
+- Estudio de algoritmos de detección de tala clandestina y enfermedades vegetales.  
+- Revisión de modelos de simulación para evaluar la regeneración forestal.  
+- Selección de herramientas de simulación (**Gazebo, CARLA, Open3DE**) y frameworks de IA (**PyTorch, TensorFlow**).  
+
+---
 
 ### Fase 2: Simulación (6 meses)
-- Creación de un simulador virtual que modele diferentes entornos agrícolas.  
+- Creación de un entorno forestal virtual con obstáculos naturales (árboles, rocas, terrenos irregulares).  
+- Modelado del robot con sensores LiDAR, cámaras RGB-D, térmicas y módulos de detección de incendios.  
+- Simulación de incendios controlados para evaluar la capacidad de detección.  
+- Generación de mapas del suelo con datos simulados de pH, humedad y temperatura.  
+- Modelado de zonas degradadas con diferentes niveles de daño ecológico.  
+- Simulación de tala clandestina y detección de enfermedades en la flora.  
+- Creación de zonas reforestadas con árboles jóvenes y generación de un modelo de evaluación de salud basado en color y densidad.  
+
+---
 
 ### Fase 3: Diseño del Sistema de Navegación (9 meses)
-- Implementación de un algoritmo de percepción ya existente en el simulador.  
-- Desarrollo de un sistema de control de navegación que integre:  
-  - SLAM para mapeo y localización.  
-  - Algoritmos de planificación de rutas (A*, RRT).  
-  - Evasión de obstáculos en tiempo real.  
-- Integración de un módulo de toma de decisiones.  
-- Incorporación de sensores de temperatura, pH y humedad para interactuar con el suelo.  
+
+#### Navegación autónoma
+- Implementación de **SLAM 3D** para mapeo y localización en entornos forestales.  
+- Algoritmos de evasión dinámica (DWA o MPC) para evitar árboles, rocas y desniveles.  
+- Uso de **redes neuronales convolucionales (CNN)** para identificar caminos transitables.  
+
+#### Detección de incendios
+- Integración de **sensores térmicos simulados** para la detección de puntos calientes.  
+- IA para la identificación automática de llamas o humo en imágenes térmicas.  
+- Generación de alertas con geolocalización en el entorno virtual.  
+
+#### Monitoreo del suelo
+- Integración de sensores simulados de **pH, humedad y temperatura**.  
+- Generación de mapas georreferenciados del estado del suelo.  
+- Exportación de los datos a GIS para análisis geoespacial.  
+
+#### Módulo de recuperación ecológica
+- Análisis de zonas degradadas en el entorno simulado.  
+- Clasificación del tipo de degradación:  
+    - Baja: pérdida de nutrientes.  
+    - Media: erosión leve.  
+    - Alta: pérdida de vegetación y compactación del suelo.  
+- Determinación del tipo de sustrato necesario para la recuperación:  
+    - Compost o materia orgánica.  
+    - Riego controlado.  
+    - Reforestación simulada.  
+- Generación de un mapa de intervención con recomendaciones de recuperación.  
+
+#### Vigilancia de la biodiversidad
+- Detección de **tala clandestina** mediante comparación de imágenes satelitales simuladas con el entorno actual.  
+- Identificación de **enfermedades vegetales** a través de análisis de color, textura y patrones en las hojas.  
+- Monitoreo continuo de **zonas reforestadas** evaluando:  
+    - Supervivencia de árboles jóvenes.  
+    - Crecimiento y densidad de la vegetación.  
+    - Presencia de deficiencias visibles.  
+
+---
 
 ### Fase 4: Optimización (6 meses)
-- Pruebas del sistema de navegación en el simulador, ajustando parámetros y optimizando algoritmos.  
-- Implementación de aprendizaje por refuerzo para mejorar la adaptabilidad del robot.  
+- Ajuste fino de los algoritmos de navegación para mejorar la evasión de obstáculos.  
+- Optimización del modelo de detección de incendios con **aprendizaje por refuerzo**.  
+- Validación del módulo de recuperación ecológica con múltiples escenarios de degradación.  
+- Pruebas de detección de tala y enfermedades simuladas.  
 
-### Fase 5: Validación Física (6 meses)
-- Implementación del sistema de navegación en un robot físico.  
-- Pruebas en un entorno agrícola real, evaluando la capacidad de evasión de obstáculos, precisión de navegación y adaptabilidad.  
-- Validación del monitoreo del suelo mediante sensores, verificando la precisión y consistencia de los datos obtenidos.  
-- Validación de la funcionalidad de recuperación ecológica mediante siembra automatizada o restauración controlada.  
-- Comparación del rendimiento físico con la simulación.  
+---
 
-### Fase 6: Análisis y Documentación (6 meses)
-- Comparación del rendimiento del sistema con otros métodos de navegación autónoma.  
+### Fase 5: Análisis y Documentación (6 meses)
+- Comparación del sistema con otras tecnologías de monitoreo forestal en simulación.  
 - Análisis de datos para evaluar la eficiencia, precisión y robustez del sistema.  
-- Documentación de resultados, redacción de tesis y publicación de artículos científicos.  
+- Publicación de resultados en revistas científicas y redacción de la tesis doctoral.  
 
 ---
 
 ## Recursos Necesarios
 
-### Software:
-- Herramientas de simulación: Gazebo, Open3DEngine, Carla.  
-- Frameworks de IA: TensorFlow, PyTorch (por revisar).  
-- Herramientas de desarrollo: ROS2 (Robot Operating System).  
-
-### Hardware:
-- Robot físico con capacidad de navegación autónoma.  
-- Sensores LiDAR, cámaras estereoscópicas, GPS RTK para navegación de alta precisión.  
-- Sensores de temperatura, pH, luz y humedad para la interacción con el ambiente.  
-- Computadora de a bordo para el procesamiento de IA en tiempo real.  
-
----
-
-## Comparación con Robots Agrícolas Existentes
-
-1. [Naïo Technologies – Oz](https://www.naio-technologies.com/en/oz-robot/):  
-   - Robot agrícola autónomo para deshierbe.  
-   - Usa navegación basada en GPS y cámaras.  
-   - Diferencia: Mi sistema integrará IA con aprendizaje por refuerzo para mejorar la adaptabilidad, además de monitorear el suelo y apoyar la recuperación ecológica.  
-
-2. [Agrointelli – Robotti](https://www.agrointelli.com/robotti/):  
-   - Robot para labranza autónoma.  
-   - Usa GNSS para navegación.  
-   - Diferencia: Mi sistema incorporará percepción avanzada, evasión dinámica de obstáculos, monitoreo del suelo y capacidades de recuperación ecológica.  
-
-3. [EcoRobotix ARA](https://www.ecorobotix.com/en/ara):  
-   - Robot autónomo de precisión para fumigación.  
-   - Usa visión artificial para identificar malas hierbas.  
-   - Diferencia: Mi sistema estará orientado a navegación flexible en terrenos complejos, con sensores para análisis del suelo y funcionalidad ecológica.  
+### Software
+- **Simulación:** Gazebo, CARLA, Open3DE.  
+- **Frameworks de IA:** PyTorch, TensorFlow.  
+- **Navegación:** ROS2 (Robot Operating System).  
+- **Visualización:** RViz o Foxglove.  
+- **GIS:** QGIS para el análisis geoespacial.  
 
 ---
 
 ## Impacto Esperado
 
-- **Científico:** Avances en la navegación autónoma, IA y robótica agrícola, con aplicaciones verificadas en robots reales.  
-- **Económico:** Reducción de costos operativos en la agricultura mediante la automatización.  
-- **Social:** Contribución a la seguridad alimentaria y a la restauración de zonas ecológicas.  
-- **Ambiental:** Minimización del impacto ambiental mediante la optimización de rutas, el uso de insumos y la recuperación de suelos degradados.  
+### Científico
+- Avance en la navegación autónoma en entornos forestales no estructurados.  
+
+### Ambiental
+- Detección temprana de incendios.  
+- Monitoreo de zonas reforestadas.  
+- Protección de la biodiversidad.
