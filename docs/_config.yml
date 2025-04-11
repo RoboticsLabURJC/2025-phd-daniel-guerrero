@@ -21,7 +21,7 @@ title                    : "Robot Forestal"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Luis Daniel Guerrero"
-description              : "Blog  dedicado a subir los avances del robot forestal"
+description              : "Blog  dedicado a subir los avances del robot forestal para proyecto doctoral"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -38,9 +38,7 @@ comments:
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
+    server               : 
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
@@ -115,11 +113,11 @@ analytics:
 author:
   name             : "Luis Daniel Guerrero"
   avatar           : "/assets/images/profile.png"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "Soy ingeniero en robótica, apasionado por los vehículos autónomos y el desarrollo de tecnologías inteligentes que impacten positivamente el mundo real."
+  location         : "Ciudad de México"
   email            :
   links:
-    - label: "Email"
+    - label: "luis.daniel.guerrero.b@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
     - label: "Website"
@@ -149,7 +147,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/RoboticsLabURJC/2025-phd-daniel-guerrero"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
