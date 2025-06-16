@@ -1,0 +1,10 @@
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder/CMakeFiles/uninstall.dir
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder/CMakeFiles/pcl_recorder_uninstall.dir
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder/CMakeFiles/pcl_recorder_node.dir
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder/CMakeFiles/test.dir
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder/CMakeFiles/edit_cache.dir
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder/CMakeFiles/rebuild_cache.dir
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder/CMakeFiles/list_install_components.dir
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder/CMakeFiles/install.dir
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder/CMakeFiles/install/local.dir
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder/CMakeFiles/install/strip.dir

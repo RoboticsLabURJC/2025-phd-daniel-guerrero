@@ -1,0 +1,1 @@
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder/ament_cmake_core/pcl_recorderConfig-version.cmake

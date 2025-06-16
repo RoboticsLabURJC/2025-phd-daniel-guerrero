@@ -1,0 +1,774 @@
+[0.024s] Invoking command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /opt/cmake-3.28.3-linux-x86_64/bin/cmake /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs
+[0.869s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.869s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[0.869s]   CMake.
+[0.869s] 
+[0.869s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.869s]   CMake that the project does not need compatibility with older versions.
+[0.869s] 
+[0.869s] [0m
+[0.870s] -- Found ros_environment: 3.2.2 (/opt/ros/humble/share/ros_environment/cmake)
+[0.870s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.870s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.870s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.870s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.870s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.870s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.870s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.870s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.870s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.870s] -- Found std_msgs: 4.8.0 (/opt/ros/humble/share/std_msgs/cmake)
+[0.871s] -- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.871s] -- Found diagnostic_msgs: 4.8.0 (/opt/ros/humble/share/diagnostic_msgs/cmake)
+[0.871s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.871s] -- Found ament_cmake_cppcheck: 0.12.12 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)
+[0.871s] -- Found ament_cmake_cpplint: 0.12.12 (/opt/ros/humble/share/ament_cmake_cpplint/cmake)
+[0.871s] -- Found ament_cmake_uncrustify: 0.12.12 (/opt/ros/humble/share/ament_cmake_uncrustify/cmake)
+[0.871s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.599s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.900s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.904s] [33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[1.904s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.904s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.904s]   the cmake_policy command to set the policy and suppress this warning.
+[1.904s] 
+[1.904s] Call Stack (most recent call first):
+[1.904s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.904s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.904s]   CMakeLists.txt:79 (rosidl_generate_interfaces)
+[1.904s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.904s] [0m
+[1.921s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.923s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.924s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):
+[1.924s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.924s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.924s]   the cmake_policy command to set the policy and suppress this warning.
+[1.924s] 
+[1.924s] Call Stack (most recent call first):
+[1.924s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[1.924s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.924s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.924s]   CMakeLists.txt:79 (rosidl_generate_interfaces)
+[1.924s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.924s] [0m
+[1.940s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):
+[1.940s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.940s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.940s]   the cmake_policy command to set the policy and suppress this warning.
+[1.940s] 
+[1.941s] Call Stack (most recent call first):
+[1.941s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[1.941s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.941s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.941s]   CMakeLists.txt:79 (rosidl_generate_interfaces)
+[1.941s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.941s] [0m
+[1.947s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.947s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.947s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.947s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.971s] -- Found PythonExtra: .so  
+[2.064s] -- Found ament_cmake_flake8: 0.12.12 (/opt/ros/humble/share/ament_cmake_flake8/cmake)
+[2.066s] -- Found ament_cmake_pep257: 0.12.12 (/opt/ros/humble/share/ament_cmake_pep257/cmake)
+[2.075s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.097s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.098s] -- Added test 'lint_cmake' to check CMake code style
+[2.098s] -- Added test 'xmllint' to check XML markup files
+[2.102s] -- Configuring done (2.1s)
+[2.197s] -- Generating done (0.1s)
+[2.210s] -- Build files have been written to: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs
+[2.216s] Invoked command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /opt/cmake-3.28.3-linux-x86_64/bin/cmake /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs
+[2.219s] Invoking command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /opt/cmake-3.28.3-linux-x86_64/bin/cmake --build /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs -- -j12 -l12
+[2.241s] [  0%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.246s] [  0%] Built target ament_cmake_python_symlink_carla_msgs
+[2.246s] [  0%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.527s] running egg_info
+[2.528s] creating carla_msgs.egg-info
+[2.528s] writing carla_msgs.egg-info/PKG-INFO
+[2.528s] writing dependency_links to carla_msgs.egg-info/dependency_links.txt
+[2.528s] writing top-level names to carla_msgs.egg-info/top_level.txt
+[2.528s] writing manifest file 'carla_msgs.egg-info/SOURCES.txt'
+[2.529s] reading manifest file 'carla_msgs.egg-info/SOURCES.txt'
+[2.530s] writing manifest file 'carla_msgs.egg-info/SOURCES.txt'
+[2.554s] [  0%] Built target ament_cmake_python_build_carla_msgs_egg
+[4.403s] [  0%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_ego_vehicle_control__functions.c.o[0m
+[4.403s] [  1%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_bounding_box__functions.c.o[0m
+[4.405s] [  2%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_ego_vehicle_status__functions.c.o[0m
+[4.409s] [  2%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__functions.c.o[0m
+[4.428s] [  3%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_ego_vehicle_info__functions.c.o[0m
+[4.438s] [  3%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_collision_event__functions.c.o[0m
+[4.438s] [  4%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_lane_invasion_event__functions.c.o[0m
+[4.442s] [  4%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_world_info__functions.c.o[0m
+[4.449s] [  5%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_actor_info__functions.c.o[0m
+[4.455s] [  6%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_control__functions.c.o[0m
+[4.459s] [  6%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_actor_list__functions.c.o[0m
+[4.547s] [  6%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_status__functions.c.o[0m
+[4.550s] [  7%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_traffic_light_info__functions.c.o[0m
+[4.556s] [  7%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_traffic_light_info_list__functions.c.o[0m
+[4.561s] [  8%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_traffic_light_status__functions.c.o[0m
+[4.566s] [  8%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_traffic_light_status_list__functions.c.o[0m
+[4.568s] [  9%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_walker_control__functions.c.o[0m
+[4.576s] [  9%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/msg/detail/carla_weather_parameters__functions.c.o[0m
+[4.576s] [ 10%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/srv/detail/spawn_object__functions.c.o[0m
+[4.597s] [ 11%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/srv/detail/destroy_object__functions.c.o[0m
+[4.599s] [ 11%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_c.dir/rosidl_generator_c/carla_msgs/srv/detail/get_blueprints__functions.c.o[0m
+[4.701s] [ 12%] [32m[1mLinking C shared library libcarla_msgs__rosidl_generator_c.so[0m
+[4.745s] [ 12%] Built target carla_msgs__rosidl_generator_c
+[4.751s] [ 13%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[4.754s] [ 15%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[4.754s] [ 15%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[4.791s] [ 15%] Built target carla_msgs__cpp
+[4.799s] [ 16%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[4.802s] [ 17%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.802s] [ 18%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.687s] [ 18%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_bounding_box__type_support.cpp.o[0m
+[5.687s] [ 19%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_ego_vehicle_control__type_support.cpp.o[0m
+[5.687s] [ 19%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_ego_vehicle_status__type_support.cpp.o[0m
+[5.688s] [ 20%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_ego_vehicle_info_wheel__type_support.cpp.o[0m
+[5.688s] [ 20%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_ego_vehicle_info__type_support.cpp.o[0m
+[5.693s] [ 21%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_collision_event__type_support.cpp.o[0m
+[5.693s] [ 21%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_lane_invasion_event__type_support.cpp.o[0m
+[5.965s] [ 22%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_world_info__type_support.cpp.o[0m
+[5.977s] [ 22%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_actor_info__type_support.cpp.o[0m
+[5.990s] [ 23%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_actor_list__type_support.cpp.o[0m
+[6.003s] [ 23%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_control__type_support.cpp.o[0m
+[6.024s] [ 24%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_status__type_support.cpp.o[0m
+[6.033s] [ 25%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_traffic_light_info__type_support.cpp.o[0m
+[6.144s] [ 25%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_traffic_light_info_list__type_support.cpp.o[0m
+[6.226s] [ 26%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_bounding_box__type_support.cpp.o[0m
+[6.281s] [ 26%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_ego_vehicle_control__type_support.cpp.o[0m
+[6.283s] [ 27%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_traffic_light_status__type_support.cpp.o[0m
+[6.317s] [ 27%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_bounding_box__type_support.cpp.o[0m
+[6.354s] [ 27%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_traffic_light_status_list__type_support.cpp.o[0m
+[6.372s] [ 28%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_walker_control__type_support.cpp.o[0m
+[6.377s] [ 29%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_ego_vehicle_status__type_support.cpp.o[0m
+[6.384s] [ 30%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_ego_vehicle_control__type_support.cpp.o[0m
+[6.398s] [ 30%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_ego_vehicle_status__type_support.cpp.o[0m
+[6.425s] [ 30%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__type_support.cpp.o[0m
+[6.447s] [ 31%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_ego_vehicle_info_wheel__type_support.cpp.o[0m
+[6.449s] [ 31%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_ego_vehicle_info__type_support.cpp.o[0m
+[6.483s] [ 32%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_collision_event__type_support.cpp.o[0m
+[6.484s] [ 32%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_lane_invasion_event__type_support.cpp.o[0m
+[6.514s] [ 32%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_bounding_box__type_support.cpp.o[0m
+[6.531s] [ 33%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_ego_vehicle_control__type_support.cpp.o[0m
+[6.538s] [ 34%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_world_info__type_support.cpp.o[0m
+[6.567s] [ 35%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_ego_vehicle_info__type_support.cpp.o[0m
+[6.585s] [ 35%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_actor_info__type_support.cpp.o[0m
+[6.599s] [ 35%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_collision_event__type_support.cpp.o[0m
+[6.626s] [ 36%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_lane_invasion_event__type_support.cpp.o[0m
+[6.644s] [ 37%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_actor_list__type_support.cpp.o[0m
+[6.658s] [ 37%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_world_info__type_support.cpp.o[0m
+[6.690s] [ 37%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/msg/carla_weather_parameters__type_support.cpp.o[0m
+[6.690s] [ 37%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_control__type_support.cpp.o[0m
+[6.722s] [ 38%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_status__type_support.cpp.o[0m
+[6.727s] [ 39%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/srv/spawn_object__type_support.cpp.o[0m
+[6.754s] [ 39%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_traffic_light_info__type_support.cpp.o[0m
+[6.755s] [ 39%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_ego_vehicle_status__type_support.cpp.o[0m
+[6.776s] [ 39%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_bounding_box__type_support_c.cpp.o[0m
+[6.801s] [ 40%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_traffic_light_info_list__type_support.cpp.o[0m
+[6.807s] [ 40%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_bounding_box__type_support.c.o[0m
+[6.831s] [ 40%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_traffic_light_status__type_support.cpp.o[0m
+[6.854s] [ 41%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_ego_vehicle_control__type_support.c.o[0m
+[6.866s] [ 42%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_traffic_light_status_list__type_support.cpp.o[0m
+[6.898s] [ 43%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_walker_control__type_support.cpp.o[0m
+[6.907s] [ 43%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/msg/carla_weather_parameters__type_support.cpp.o[0m
+[6.910s] [ 43%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_ego_vehicle_status__type_support.c.o[0m
+[6.929s] [ 43%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/srv/destroy_object__type_support.cpp.o[0m
+[6.932s] [ 44%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_ego_vehicle_control__type_support_c.cpp.o[0m
+[6.938s] [ 45%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/srv/spawn_object__type_support.cpp.o[0m
+[6.941s] [ 45%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/srv/destroy_object__type_support.cpp.o[0m
+[6.960s] [ 46%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_actor_info__type_support.cpp.o[0m
+[6.963s] [ 47%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__type_support.c.o[0m
+[6.971s] [ 48%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_ego_vehicle_info_wheel__type_support.cpp.o[0m
+[6.978s] [ 48%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_ego_vehicle_status__type_support_c.cpp.o[0m
+[6.985s] [ 49%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_msgs/srv/get_blueprints__type_support.cpp.o[0m
+[7.002s] [ 50%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_msgs/srv/get_blueprints__type_support.cpp.o[0m
+[7.011s] [ 51%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_ego_vehicle_info__type_support.c.o[0m
+[7.012s] [ 51%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_collision_event__type_support.c.o[0m
+[7.018s] [ 51%] [32m[1mLinking CXX shared library libcarla_msgs__rosidl_typesupport_c.so[0m
+[7.023s] [ 51%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_actor_list__type_support.cpp.o[0m
+[7.053s] [ 52%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_control__type_support.cpp.o[0m
+[7.057s] [ 53%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_lane_invasion_event__type_support.c.o[0m
+[7.073s] [ 53%] Built target carla_msgs__rosidl_typesupport_c
+[7.080s] [ 54%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__type_support_c.cpp.o[0m
+[7.102s] [ 54%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_ego_vehicle_info__type_support.cpp.o[0m
+[7.122s] [ 54%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_world_info__type_support.c.o[0m
+[7.148s] [ 54%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_ego_vehicle_info__type_support_c.cpp.o[0m
+[7.202s] [ 55%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_actor_info__type_support.c.o[0m
+[7.202s] [ 55%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_status__type_support.cpp.o[0m
+[7.264s] [ 55%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_actor_list__type_support.c.o[0m
+[7.273s] [ 55%] [32m[1mLinking CXX shared library libcarla_msgs__rosidl_typesupport_cpp.so[0m
+[7.276s] [ 57%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_control__type_support.c.o[0m
+[7.276s] [ 57%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_collision_event__type_support_c.cpp.o[0m
+[7.309s] [ 57%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_status__type_support.c.o[0m
+[7.310s] [ 57%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_lane_invasion_event__type_support_c.cpp.o[0m
+[7.335s] [ 58%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_collision_event__type_support.cpp.o[0m
+[7.337s] [ 58%] Built target carla_msgs__rosidl_typesupport_cpp
+[7.344s] [ 59%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_traffic_light_info__type_support.c.o[0m
+[7.352s] [ 60%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_lane_invasion_event__type_support.cpp.o[0m
+[7.358s] [ 60%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_world_info__type_support.cpp.o[0m
+[7.377s] [ 61%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_traffic_light_info__type_support.cpp.o[0m
+[7.396s] [ 61%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_traffic_light_info_list__type_support.c.o[0m
+[7.436s] [ 61%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_traffic_light_info_list__type_support.cpp.o[0m
+[7.458s] [ 62%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_traffic_light_status__type_support.c.o[0m
+[7.469s] [ 63%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_actor_info__type_support.cpp.o[0m
+[7.501s] [ 64%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_traffic_light_status__type_support.cpp.o[0m
+[7.512s] [ 64%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_traffic_light_status_list__type_support.c.o[0m
+[7.519s] [ 65%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_world_info__type_support_c.cpp.o[0m
+[7.550s] [ 66%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_walker_control__type_support.c.o[0m
+[7.550s] [ 66%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_actor_info__type_support_c.cpp.o[0m
+[7.617s] [ 66%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_weather_parameters__type_support.c.o[0m
+[7.629s] [ 67%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_actor_list__type_support_c.cpp.o[0m
+[7.666s] [ 68%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/srv/detail/spawn_object__type_support.c.o[0m
+[7.671s] [ 68%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_actor_list__type_support.cpp.o[0m
+[7.691s] [ 69%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_control__type_support.cpp.o[0m
+[7.722s] [ 69%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/srv/detail/destroy_object__type_support.c.o[0m
+[7.741s] [ 69%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_traffic_light_status_list__type_support.cpp.o[0m
+[7.760s] [ 70%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_walker_control__type_support.cpp.o[0m
+[7.779s] [ 71%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_msgs/srv/detail/get_blueprints__type_support.c.o[0m
+[7.787s] [ 71%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_status__type_support.cpp.o[0m
+[7.798s] [ 72%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_traffic_light_info__type_support.cpp.o[0m
+[7.800s] [ 72%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/msg/detail/carla_weather_parameters__type_support.cpp.o[0m
+[7.836s] [ 72%] [32m[1mLinking C shared library libcarla_msgs__rosidl_typesupport_introspection_c.so[0m
+[7.861s] [ 73%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_control__type_support_c.cpp.o[0m
+[7.893s] [ 73%] Built target carla_msgs__rosidl_typesupport_introspection_c
+[7.903s] [ 73%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_status__type_support_c.cpp.o[0m
+[7.908s] [ 74%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_traffic_light_info__type_support_c.cpp.o[0m
+[7.913s] [ 75%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/srv/detail/spawn_object__type_support.cpp.o[0m
+[7.982s] [ 75%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/srv/detail/destroy_object__type_support.cpp.o[0m
+[8.066s] [ 75%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_traffic_light_info_list__type_support.cpp.o[0m
+[8.092s] [ 76%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_traffic_light_status__type_support.cpp.o[0m
+[8.092s] [ 76%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_traffic_light_info_list__type_support_c.cpp.o[0m
+[8.099s] [ 77%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_msgs/srv/detail/get_blueprints__type_support.cpp.o[0m
+[8.101s] [ 77%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_traffic_light_status_list__type_support.cpp.o[0m
+[8.200s] [ 78%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_walker_control__type_support.cpp.o[0m
+[8.223s] [ 78%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/msg/detail/dds_fastrtps/carla_weather_parameters__type_support.cpp.o[0m
+[8.257s] [ 79%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_traffic_light_status__type_support_c.cpp.o[0m
+[8.260s] [ 79%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_traffic_light_status_list__type_support_c.cpp.o[0m
+[8.293s] [ 80%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_walker_control__type_support_c.cpp.o[0m
+[8.308s] [ 80%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/msg/detail/carla_weather_parameters__type_support_c.cpp.o[0m
+[8.326s] [ 81%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/srv/detail/spawn_object__type_support_c.cpp.o[0m
+[8.437s] [ 81%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/srv/detail/destroy_object__type_support_c.cpp.o[0m
+[8.462s] [ 82%] [32m[1mLinking CXX shared library libcarla_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[8.470s] [ 83%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_msgs/srv/detail/get_blueprints__type_support_c.cpp.o[0m
+[8.490s] [ 84%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/srv/detail/dds_fastrtps/spawn_object__type_support.cpp.o[0m
+[8.596s] [ 84%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/srv/detail/dds_fastrtps/destroy_object__type_support.cpp.o[0m
+[8.602s] [ 85%] [32mBuilding CXX object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_msgs/srv/detail/dds_fastrtps/get_blueprints__type_support.cpp.o[0m
+[8.659s] [ 85%] Built target carla_msgs__rosidl_typesupport_introspection_cpp
+[8.767s] [ 85%] [32m[1mLinking CXX shared library libcarla_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[8.828s] [ 85%] Built target carla_msgs__rosidl_typesupport_fastrtps_c
+[8.913s] [ 85%] [32m[1mLinking CXX shared library libcarla_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[8.973s] [ 85%] Built target carla_msgs__rosidl_typesupport_fastrtps_cpp
+[8.981s] [ 85%] Built target carla_msgs
+[8.989s] [ 86%] [34m[1mGenerating Python code for ROS interfaces[0m
+[11.284s] [ 86%] Built target carla_msgs__py
+[11.291s] [ 87%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_bounding_box_s.c.o[0m
+[11.291s] [ 87%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_ego_vehicle_control_s.c.o[0m
+[11.292s] [ 87%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_ego_vehicle_status_s.c.o[0m
+[11.292s] [ 88%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_ego_vehicle_info_wheel_s.c.o[0m
+[11.292s] [ 88%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_ego_vehicle_info_s.c.o[0m
+[11.292s] [ 89%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_collision_event_s.c.o[0m
+[11.292s] [ 89%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_lane_invasion_event_s.c.o[0m
+[11.293s] [ 90%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_world_info_s.c.o[0m
+[11.293s] [ 90%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_actor_info_s.c.o[0m
+[11.293s] [ 90%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_control_s.c.o[0m
+[11.293s] [ 91%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_actor_list_s.c.o[0m
+[11.294s] [ 92%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_status_s.c.o[0m
+[11.407s] [ 92%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_traffic_light_info_s.c.o[0m
+[11.409s] [ 93%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_traffic_light_info_list_s.c.o[0m
+[11.409s] [ 93%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_traffic_light_status_s.c.o[0m
+[11.410s] [ 94%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_traffic_light_status_list_s.c.o[0m
+[11.411s] [ 94%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_walker_control_s.c.o[0m
+[11.412s] [ 95%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/msg/_carla_weather_parameters_s.c.o[0m
+[11.412s] [ 96%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/srv/_spawn_object_s.c.o[0m
+[11.414s] [ 96%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/srv/_destroy_object_s.c.o[0m
+[11.414s] [ 97%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_generator_py.dir/rosidl_generator_py/carla_msgs/srv/_get_blueprints_s.c.o[0m
+[11.537s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/carla_msgs/libcarla_msgs__rosidl_generator_py.so[0m
+[11.567s] [ 97%] Built target carla_msgs__rosidl_generator_py
+[11.574s] [ 98%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/carla_msgs/_carla_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[11.575s] [100%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/carla_msgs/_carla_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[11.575s] [100%] [32mBuilding C object CMakeFiles/carla_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/carla_msgs/_carla_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[11.707s] [100%] [32m[1mLinking C shared library rosidl_generator_py/carla_msgs/carla_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.707s] [100%] [32m[1mLinking C shared library rosidl_generator_py/carla_msgs/carla_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.709s] [100%] [32m[1mLinking C shared library rosidl_generator_py/carla_msgs/carla_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.735s] [100%] Built target carla_msgs__rosidl_typesupport_c__pyext
+[11.735s] [100%] Built target carla_msgs__rosidl_typesupport_fastrtps_c__pyext
+[11.736s] [100%] Built target carla_msgs__rosidl_typesupport_introspection_c__pyext
+[11.742s] Invoked command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /opt/cmake-3.28.3-linux-x86_64/bin/cmake --build /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs -- -j12 -l12
+[11.743s] Invoking command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /opt/cmake-3.28.3-linux-x86_64/bin/cmake --install /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs
+[11.745s] -- Install configuration: ""
+[11.746s] -- Execute custom install script
+[11.746s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/ament_index/resource_index/rosidl_interfaces/carla_msgs
+[11.750s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_actor_info.h
+[11.751s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_actor_list.h
+[11.753s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_bounding_box.h
+[11.755s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_collision_event.h
+[11.757s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_control.h
+[11.758s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_ego_vehicle_control.h
+[11.760s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_ego_vehicle_info.h
+[11.762s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_ego_vehicle_info_wheel.h
+[11.764s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_ego_vehicle_status.h
+[11.765s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_lane_invasion_event.h
+[11.767s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_status.h
+[11.769s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_traffic_light_info.h
+[11.771s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_traffic_light_info_list.h
+[11.772s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_traffic_light_status.h
+[11.774s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_traffic_light_status_list.h
+[11.776s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_walker_control.h
+[11.778s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_weather_parameters.h
+[11.779s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_world_info.h
+[11.781s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_info__functions.h
+[11.783s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_info__struct.h
+[11.785s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_info__type_support.h
+[11.787s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_list__functions.h
+[11.789s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_list__struct.h
+[11.792s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_list__type_support.h
+[11.794s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_bounding_box__functions.h
+[11.795s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_bounding_box__struct.h
+[11.797s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_bounding_box__type_support.h
+[11.799s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_collision_event__functions.h
+[11.801s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_collision_event__struct.h
+[11.802s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_collision_event__type_support.h
+[11.804s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_control__functions.h
+[11.806s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_control__struct.h
+[11.808s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_control__type_support.h
+[11.809s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_control__functions.h
+[11.811s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_control__struct.h
+[11.813s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_control__type_support.h
+[11.815s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info__functions.h
+[11.817s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info__struct.h
+[11.818s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info__type_support.h
+[11.820s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__functions.h
+[11.822s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__struct.h
+[11.824s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__type_support.h
+[11.825s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_status__functions.h
+[11.827s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_status__struct.h
+[11.829s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_status__type_support.h
+[11.831s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_lane_invasion_event__functions.h
+[11.832s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_lane_invasion_event__struct.h
+[11.834s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_lane_invasion_event__type_support.h
+[11.836s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_status__functions.h
+[11.838s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_status__struct.h
+[11.839s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_status__type_support.h
+[11.841s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info__functions.h
+[11.843s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info__struct.h
+[11.845s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info__type_support.h
+[11.846s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info_list__functions.h
+[11.848s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info_list__struct.h
+[11.850s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info_list__type_support.h
+[11.852s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status__functions.h
+[11.853s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status__struct.h
+[11.855s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status__type_support.h
+[11.857s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status_list__functions.h
+[11.859s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status_list__struct.h
+[11.860s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status_list__type_support.h
+[11.862s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_walker_control__functions.h
+[11.864s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_walker_control__struct.h
+[11.866s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_walker_control__type_support.h
+[11.867s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_weather_parameters__functions.h
+[11.869s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_weather_parameters__struct.h
+[11.871s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_weather_parameters__type_support.h
+[11.873s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_world_info__functions.h
+[11.875s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_world_info__struct.h
+[11.877s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_world_info__type_support.h
+[11.879s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/rosidl_generator_c__visibility_control.h
+[11.881s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/destroy_object.h
+[11.883s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/destroy_object__functions.h
+[11.885s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/destroy_object__struct.h
+[11.887s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/destroy_object__type_support.h
+[11.890s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/get_blueprints__functions.h
+[11.893s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/get_blueprints__struct.h
+[11.895s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/get_blueprints__type_support.h
+[11.897s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/spawn_object__functions.h
+[11.899s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/spawn_object__struct.h
+[11.901s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/spawn_object__type_support.h
+[11.903s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/get_blueprints.h
+[11.905s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/spawn_object.h
+[11.908s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/environment/library_path.sh
+[11.910s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/environment/library_path.dsv
+[11.914s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_info__rosidl_typesupport_fastrtps_c.h
+[11.916s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_list__rosidl_typesupport_fastrtps_c.h
+[11.918s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_bounding_box__rosidl_typesupport_fastrtps_c.h
+[11.920s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_collision_event__rosidl_typesupport_fastrtps_c.h
+[11.922s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_control__rosidl_typesupport_fastrtps_c.h
+[11.924s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_control__rosidl_typesupport_fastrtps_c.h
+[11.926s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info__rosidl_typesupport_fastrtps_c.h
+[11.928s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__rosidl_typesupport_fastrtps_c.h
+[11.930s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_status__rosidl_typesupport_fastrtps_c.h
+[11.932s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_lane_invasion_event__rosidl_typesupport_fastrtps_c.h
+[11.934s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_status__rosidl_typesupport_fastrtps_c.h
+[11.936s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info__rosidl_typesupport_fastrtps_c.h
+[11.938s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info_list__rosidl_typesupport_fastrtps_c.h
+[11.940s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status__rosidl_typesupport_fastrtps_c.h
+[11.942s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status_list__rosidl_typesupport_fastrtps_c.h
+[11.944s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_walker_control__rosidl_typesupport_fastrtps_c.h
+[11.946s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_weather_parameters__rosidl_typesupport_fastrtps_c.h
+[11.948s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_world_info__rosidl_typesupport_fastrtps_c.h
+[11.950s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[11.952s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/destroy_object__rosidl_typesupport_fastrtps_c.h
+[11.954s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/get_blueprints__rosidl_typesupport_fastrtps_c.h
+[11.956s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/spawn_object__rosidl_typesupport_fastrtps_c.h
+[11.960s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_actor_info.hpp
+[11.963s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_actor_list.hpp
+[11.965s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_bounding_box.hpp
+[11.967s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_collision_event.hpp
+[11.969s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_control.hpp
+[11.970s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_ego_vehicle_control.hpp
+[11.972s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_ego_vehicle_info.hpp
+[11.974s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_ego_vehicle_info_wheel.hpp
+[11.976s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_ego_vehicle_status.hpp
+[11.978s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_lane_invasion_event.hpp
+[11.980s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_status.hpp
+[11.982s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_traffic_light_info.hpp
+[11.984s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_traffic_light_info_list.hpp
+[11.986s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_traffic_light_status.hpp
+[11.989s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_traffic_light_status_list.hpp
+[11.991s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_walker_control.hpp
+[11.993s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_weather_parameters.hpp
+[11.996s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/carla_world_info.hpp
+[11.998s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_info__builder.hpp
+[12.000s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_info__struct.hpp
+[12.002s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_info__traits.hpp
+[12.004s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_info__type_support.hpp
+[12.006s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_list__builder.hpp
+[12.008s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_list__struct.hpp
+[12.010s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_list__traits.hpp
+[12.012s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_list__type_support.hpp
+[12.014s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_bounding_box__builder.hpp
+[12.016s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_bounding_box__struct.hpp
+[12.018s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_bounding_box__traits.hpp
+[12.020s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_bounding_box__type_support.hpp
+[12.022s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_collision_event__builder.hpp
+[12.024s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_collision_event__struct.hpp
+[12.026s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_collision_event__traits.hpp
+[12.028s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_collision_event__type_support.hpp
+[12.030s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_control__builder.hpp
+[12.032s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_control__struct.hpp
+[12.034s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_control__traits.hpp
+[12.036s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_control__type_support.hpp
+[12.038s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_control__builder.hpp
+[12.041s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_control__struct.hpp
+[12.043s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_control__traits.hpp
+[12.045s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_control__type_support.hpp
+[12.047s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info__builder.hpp
+[12.050s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info__struct.hpp
+[12.052s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info__traits.hpp
+[12.054s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info__type_support.hpp
+[12.056s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__builder.hpp
+[12.058s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__struct.hpp
+[12.060s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__traits.hpp
+[12.062s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__type_support.hpp
+[12.064s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_status__builder.hpp
+[12.067s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_status__struct.hpp
+[12.069s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_status__traits.hpp
+[12.071s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_status__type_support.hpp
+[12.073s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_lane_invasion_event__builder.hpp
+[12.076s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_lane_invasion_event__struct.hpp
+[12.078s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_lane_invasion_event__traits.hpp
+[12.080s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_lane_invasion_event__type_support.hpp
+[12.082s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_status__builder.hpp
+[12.084s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_status__struct.hpp
+[12.086s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_status__traits.hpp
+[12.088s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_status__type_support.hpp
+[12.090s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info__builder.hpp
+[12.092s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info__struct.hpp
+[12.094s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info__traits.hpp
+[12.096s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info__type_support.hpp
+[12.098s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info_list__builder.hpp
+[12.100s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info_list__struct.hpp
+[12.102s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info_list__traits.hpp
+[12.104s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info_list__type_support.hpp
+[12.106s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status__builder.hpp
+[12.108s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status__struct.hpp
+[12.110s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status__traits.hpp
+[12.112s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status__type_support.hpp
+[12.114s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status_list__builder.hpp
+[12.116s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status_list__struct.hpp
+[12.118s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status_list__traits.hpp
+[12.120s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status_list__type_support.hpp
+[12.122s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_walker_control__builder.hpp
+[12.124s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_walker_control__struct.hpp
+[12.126s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_walker_control__traits.hpp
+[12.128s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_walker_control__type_support.hpp
+[12.130s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_weather_parameters__builder.hpp
+[12.132s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_weather_parameters__struct.hpp
+[12.134s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_weather_parameters__traits.hpp
+[12.136s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_weather_parameters__type_support.hpp
+[12.138s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_world_info__builder.hpp
+[12.140s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_world_info__struct.hpp
+[12.142s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_world_info__traits.hpp
+[12.144s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_world_info__type_support.hpp
+[12.146s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[12.148s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/destroy_object.hpp
+[12.150s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/destroy_object__builder.hpp
+[12.152s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/destroy_object__struct.hpp
+[12.154s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/destroy_object__traits.hpp
+[12.156s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/destroy_object__type_support.hpp
+[12.158s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/get_blueprints__builder.hpp
+[12.160s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/get_blueprints__struct.hpp
+[12.162s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/get_blueprints__traits.hpp
+[12.164s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/get_blueprints__type_support.hpp
+[12.166s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/spawn_object__builder.hpp
+[12.168s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/spawn_object__struct.hpp
+[12.170s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/spawn_object__traits.hpp
+[12.172s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/spawn_object__type_support.hpp
+[12.174s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/get_blueprints.hpp
+[12.176s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/spawn_object.hpp
+[12.180s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_info__rosidl_typesupport_fastrtps_cpp.hpp
+[12.183s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_list__rosidl_typesupport_fastrtps_cpp.hpp
+[12.185s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_bounding_box__rosidl_typesupport_fastrtps_cpp.hpp
+[12.187s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_collision_event__rosidl_typesupport_fastrtps_cpp.hpp
+[12.190s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_control__rosidl_typesupport_fastrtps_cpp.hpp
+[12.192s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_control__rosidl_typesupport_fastrtps_cpp.hpp
+[12.194s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info__rosidl_typesupport_fastrtps_cpp.hpp
+[12.196s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__rosidl_typesupport_fastrtps_cpp.hpp
+[12.198s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_status__rosidl_typesupport_fastrtps_cpp.hpp
+[12.200s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_lane_invasion_event__rosidl_typesupport_fastrtps_cpp.hpp
+[12.202s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_status__rosidl_typesupport_fastrtps_cpp.hpp
+[12.204s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info__rosidl_typesupport_fastrtps_cpp.hpp
+[12.206s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info_list__rosidl_typesupport_fastrtps_cpp.hpp
+[12.208s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status__rosidl_typesupport_fastrtps_cpp.hpp
+[12.210s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status_list__rosidl_typesupport_fastrtps_cpp.hpp
+[12.212s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_walker_control__rosidl_typesupport_fastrtps_cpp.hpp
+[12.214s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_weather_parameters__rosidl_typesupport_fastrtps_cpp.hpp
+[12.216s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_world_info__rosidl_typesupport_fastrtps_cpp.hpp
+[12.218s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[12.220s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/destroy_object__rosidl_typesupport_fastrtps_cpp.hpp
+[12.223s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/get_blueprints__rosidl_typesupport_fastrtps_cpp.hpp
+[12.225s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/spawn_object__rosidl_typesupport_fastrtps_cpp.hpp
+[12.228s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_info__rosidl_typesupport_introspection_c.h
+[12.230s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_list__rosidl_typesupport_introspection_c.h
+[12.232s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_bounding_box__rosidl_typesupport_introspection_c.h
+[12.234s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_collision_event__rosidl_typesupport_introspection_c.h
+[12.236s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_control__rosidl_typesupport_introspection_c.h
+[12.238s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_control__rosidl_typesupport_introspection_c.h
+[12.240s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info__rosidl_typesupport_introspection_c.h
+[12.242s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__rosidl_typesupport_introspection_c.h
+[12.244s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_status__rosidl_typesupport_introspection_c.h
+[12.246s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_lane_invasion_event__rosidl_typesupport_introspection_c.h
+[12.248s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_status__rosidl_typesupport_introspection_c.h
+[12.250s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info__rosidl_typesupport_introspection_c.h
+[12.252s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info_list__rosidl_typesupport_introspection_c.h
+[12.254s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status__rosidl_typesupport_introspection_c.h
+[12.256s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status_list__rosidl_typesupport_introspection_c.h
+[12.258s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_walker_control__rosidl_typesupport_introspection_c.h
+[12.260s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_weather_parameters__rosidl_typesupport_introspection_c.h
+[12.262s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_world_info__rosidl_typesupport_introspection_c.h
+[12.264s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[12.266s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/destroy_object__rosidl_typesupport_introspection_c.h
+[12.268s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/get_blueprints__rosidl_typesupport_introspection_c.h
+[12.270s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/spawn_object__rosidl_typesupport_introspection_c.h
+[12.273s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_info__rosidl_typesupport_introspection_cpp.hpp
+[12.276s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_actor_list__rosidl_typesupport_introspection_cpp.hpp
+[12.278s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_bounding_box__rosidl_typesupport_introspection_cpp.hpp
+[12.280s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_collision_event__rosidl_typesupport_introspection_cpp.hpp
+[12.282s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_control__rosidl_typesupport_introspection_cpp.hpp
+[12.284s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_control__rosidl_typesupport_introspection_cpp.hpp
+[12.286s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info__rosidl_typesupport_introspection_cpp.hpp
+[12.288s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_info_wheel__rosidl_typesupport_introspection_cpp.hpp
+[12.290s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_ego_vehicle_status__rosidl_typesupport_introspection_cpp.hpp
+[12.292s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_lane_invasion_event__rosidl_typesupport_introspection_cpp.hpp
+[12.295s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_status__rosidl_typesupport_introspection_cpp.hpp
+[12.297s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info__rosidl_typesupport_introspection_cpp.hpp
+[12.299s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_info_list__rosidl_typesupport_introspection_cpp.hpp
+[12.301s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status__rosidl_typesupport_introspection_cpp.hpp
+[12.303s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_traffic_light_status_list__rosidl_typesupport_introspection_cpp.hpp
+[12.305s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_walker_control__rosidl_typesupport_introspection_cpp.hpp
+[12.307s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_weather_parameters__rosidl_typesupport_introspection_cpp.hpp
+[12.309s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/msg/detail/carla_world_info__rosidl_typesupport_introspection_cpp.hpp
+[12.311s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/destroy_object__rosidl_typesupport_introspection_cpp.hpp
+[12.313s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/get_blueprints__rosidl_typesupport_introspection_cpp.hpp
+[12.315s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/include/carla_msgs/carla_msgs/srv/detail/spawn_object__rosidl_typesupport_introspection_cpp.hpp
+[12.317s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/environment/pythonpath.sh
+[12.319s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/environment/pythonpath.dsv
+[12.321s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs-1.3.0-py3.10.egg-info/PKG-INFO
+[12.323s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs-1.3.0-py3.10.egg-info/SOURCES.txt
+[12.325s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs-1.3.0-py3.10.egg-info/dependency_links.txt
+[12.327s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs-1.3.0-py3.10.egg-info/top_level.txt
+[12.332s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/__init__.py
+[12.334s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/_carla_msgs_s.ep.rosidl_typesupport_c.c
+[12.336s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/_carla_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[12.338s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/_carla_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[12.340s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/carla_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[12.342s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/carla_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[12.344s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/carla_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[12.346s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/libcarla_msgs__rosidl_generator_py.so
+[12.348s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/__init__.py
+[12.350s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_actor_info.py
+[12.352s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_actor_info_s.c
+[12.354s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_actor_list.py
+[12.356s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_actor_list_s.c
+[12.358s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_bounding_box.py
+[12.360s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_bounding_box_s.c
+[12.362s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_collision_event.py
+[12.364s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_collision_event_s.c
+[12.366s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_control.py
+[12.368s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_control_s.c
+[12.370s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_ego_vehicle_control.py
+[12.372s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_ego_vehicle_control_s.c
+[12.374s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_ego_vehicle_info.py
+[12.377s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_ego_vehicle_info_s.c
+[12.379s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_ego_vehicle_info_wheel.py
+[12.381s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_ego_vehicle_info_wheel_s.c
+[12.383s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_ego_vehicle_status.py
+[12.385s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_ego_vehicle_status_s.c
+[12.387s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_lane_invasion_event.py
+[12.389s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_lane_invasion_event_s.c
+[12.391s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_status.py
+[12.394s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_status_s.c
+[12.395s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_traffic_light_info.py
+[12.397s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_traffic_light_info_list.py
+[12.399s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_traffic_light_info_list_s.c
+[12.401s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_traffic_light_info_s.c
+[12.403s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_traffic_light_status.py
+[12.405s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_traffic_light_status_list.py
+[12.407s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_traffic_light_status_list_s.c
+[12.409s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_traffic_light_status_s.c
+[12.411s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_walker_control.py
+[12.413s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_walker_control_s.c
+[12.415s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_weather_parameters.py
+[12.417s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_weather_parameters_s.c
+[12.419s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_world_info.py
+[12.422s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_world_info_s.c
+[12.424s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/srv/__init__.py
+[12.426s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/srv/_destroy_object.py
+[12.428s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/srv/_destroy_object_s.c
+[12.430s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/srv/_get_blueprints.py
+[12.432s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/srv/_get_blueprints_s.c
+[12.434s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/srv/_spawn_object.py
+[12.436s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/srv/_spawn_object_s.c
+[12.438s] -- Up-to-date symlink: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/carla_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[12.439s] -- Up-to-date symlink: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/carla_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[12.439s] -- Up-to-date symlink: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/carla_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[12.440s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaBoundingBox.idl
+[12.442s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaEgoVehicleControl.idl
+[12.444s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaEgoVehicleStatus.idl
+[12.446s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaEgoVehicleInfoWheel.idl
+[12.448s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaEgoVehicleInfo.idl
+[12.450s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaCollisionEvent.idl
+[12.452s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaLaneInvasionEvent.idl
+[12.454s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaWorldInfo.idl
+[12.456s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaActorInfo.idl
+[12.459s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaActorList.idl
+[12.461s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaControl.idl
+[12.463s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaStatus.idl
+[12.465s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaTrafficLightInfo.idl
+[12.467s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaTrafficLightInfoList.idl
+[12.469s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaTrafficLightStatus.idl
+[12.471s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaTrafficLightStatusList.idl
+[12.473s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaWalkerControl.idl
+[12.476s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaWeatherParameters.idl
+[12.479s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/srv/SpawnObject.idl
+[12.481s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/srv/DestroyObject.idl
+[12.483s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/srv/GetBlueprints.idl
+[12.485s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaBoundingBox.msg
+[12.487s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaEgoVehicleControl.msg
+[12.489s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaEgoVehicleStatus.msg
+[12.491s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaEgoVehicleInfoWheel.msg
+[12.494s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaEgoVehicleInfo.msg
+[12.497s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaCollisionEvent.msg
+[12.499s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaLaneInvasionEvent.msg
+[12.501s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaWorldInfo.msg
+[12.503s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaActorInfo.msg
+[12.506s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaActorList.msg
+[12.508s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaControl.msg
+[12.510s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaStatus.msg
+[12.512s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaTrafficLightInfo.msg
+[12.514s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaTrafficLightInfoList.msg
+[12.517s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaTrafficLightStatus.msg
+[12.519s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaTrafficLightStatusList.msg
+[12.521s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaWalkerControl.msg
+[12.523s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/msg/CarlaWeatherParameters.msg
+[12.525s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/srv/SpawnObject.srv
+[12.527s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/srv/SpawnObject_Request.msg
+[12.529s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/srv/SpawnObject_Response.msg
+[12.531s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/srv/DestroyObject.srv
+[12.533s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/srv/DestroyObject_Request.msg
+[12.535s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/srv/DestroyObject_Response.msg
+[12.538s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/srv/GetBlueprints.srv
+[12.540s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/srv/GetBlueprints_Request.msg
+[12.542s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/srv/GetBlueprints_Response.msg
+[12.544s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/ament_index/resource_index/package_run_dependencies/carla_msgs
+[12.547s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/ament_index/resource_index/parent_prefix_path/carla_msgs
+[12.549s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/environment/ament_prefix_path.sh
+[12.551s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/environment/ament_prefix_path.dsv
+[12.553s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/environment/path.sh
+[12.555s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/environment/path.dsv
+[12.557s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/local_setup.bash
+[12.559s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/local_setup.sh
+[12.561s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/local_setup.zsh
+[12.563s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/local_setup.dsv
+[12.565s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/package.dsv
+[12.568s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/ament_index/resource_index/packages/carla_msgs
+[12.570s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/rosidl_cmake-extras.cmake
+[12.572s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[12.574s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[12.577s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[12.579s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[12.582s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[12.584s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[12.586s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/carla_msgsConfig.cmake
+[12.588s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/carla_msgsConfig-version.cmake
+[12.590s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/package.xml
+[12.592s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_generator_c.so
+[12.593s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_generator_c.so" to ""
+[12.593s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_typesupport_fastrtps_c.so
+[12.594s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[12.594s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_typesupport_fastrtps_cpp.so
+[12.595s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[12.595s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_typesupport_introspection_c.so
+[12.596s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_typesupport_introspection_c.so" to ""
+[12.596s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_typesupport_c.so
+[12.597s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_typesupport_c.so" to ""
+[12.597s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_typesupport_introspection_cpp.so
+[12.598s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[12.598s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_typesupport_cpp.so
+[12.599s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_typesupport_cpp.so" to ""
+[12.641s] Listing '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/__init__.py'...
+[12.642s] Listing '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/__init__.py'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_actor_info.py'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_actor_list.py'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_bounding_box.py'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_collision_event.py'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_control.py'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_ego_vehicle_control.py'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_ego_vehicle_info.py'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_ego_vehicle_info_wheel.py'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_ego_vehicle_status.py'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_lane_invasion_event.py'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_status.py'...
+[12.642s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_traffic_light_info.py'...
+[12.643s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_traffic_light_info_list.py'...
+[12.643s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_traffic_light_status.py'...
+[12.643s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_traffic_light_status_list.py'...
+[12.643s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_walker_control.py'...
+[12.643s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_weather_parameters.py'...
+[12.643s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/msg/_carla_world_info.py'...
+[12.643s] Listing '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/srv'...
+[12.643s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/srv/__init__.py'...
+[12.643s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/srv/_destroy_object.py'...
+[12.643s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/srv/_get_blueprints.py'...
+[12.643s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages/carla_msgs/srv/_spawn_object.py'...
+[12.645s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_generator_py.so
+[12.646s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib/libcarla_msgs__rosidl_generator_py.so" to ""
+[12.646s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/export_carla_msgs__rosidl_generator_cExport.cmake
+[12.646s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/export_carla_msgs__rosidl_generator_cExport-noconfig.cmake
+[12.647s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/export_carla_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[12.647s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/export_carla_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[12.647s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/export_carla_msgs__rosidl_generator_cppExport.cmake
+[12.648s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/export_carla_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[12.648s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/export_carla_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[12.648s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/carla_msgs__rosidl_typesupport_introspection_cExport.cmake
+[12.649s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/carla_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[12.649s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/carla_msgs__rosidl_typesupport_cExport.cmake
+[12.649s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/carla_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[12.649s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/carla_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[12.650s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/carla_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[12.650s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/carla_msgs__rosidl_typesupport_cppExport.cmake
+[12.650s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/carla_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[12.651s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/export_carla_msgs__rosidl_generator_pyExport.cmake
+[12.651s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/share/carla_msgs/cmake/export_carla_msgs__rosidl_generator_pyExport-noconfig.cmake
+[12.653s] Invoked command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /opt/cmake-3.28.3-linux-x86_64/bin/cmake --install /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs

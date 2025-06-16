@@ -1,0 +1,1 @@
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ad_demo/ament_cmake_environment_hooks/local_setup.zsh

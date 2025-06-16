@@ -1,0 +1,1 @@
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_spawn_objects/launch/carla_example_ego_vehicle.launch.py

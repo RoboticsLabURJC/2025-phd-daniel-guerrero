@@ -1,0 +1,324 @@
+[0.572s] Invoking command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_scenario_runner_types': CMAKE_PREFIX_PATH=/opt/ros/humble /opt/cmake-3.28.3-linux-x86_64/bin/cmake /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_ros_scenario_runner_types -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types
+[0.861s] -- Found ros_environment: 3.2.2 (/opt/ros/humble/share/ros_environment/cmake)
+[0.861s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.861s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.861s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.861s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.861s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.861s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.861s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.861s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.861s] [33mCMake Warning (dev) at CMakeLists.txt:1 (project):
+[0.861s]   cmake_minimum_required() should be called prior to this top-level project()
+[0.861s]   call.  Please see the cmake-commands(7) manual for usage documentation of
+[0.862s]   both commands.
+[0.862s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.862s] [0m
+[0.865s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.881s] -- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.916s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.346s] -- Found ament_cmake_cppcheck: 0.12.12 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)
+[1.348s] -- Found ament_cmake_cpplint: 0.12.12 (/opt/ros/humble/share/ament_cmake_cpplint/cmake)
+[1.349s] -- Found ament_cmake_uncrustify: 0.12.12 (/opt/ros/humble/share/ament_cmake_uncrustify/cmake)
+[1.351s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.163s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.453s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.458s] [33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[2.458s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[2.458s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[2.458s]   the cmake_policy command to set the policy and suppress this warning.
+[2.458s] 
+[2.458s] Call Stack (most recent call first):
+[2.458s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[2.458s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[2.458s]   CMakeLists.txt:39 (rosidl_generate_interfaces)
+[2.458s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.458s] [0m
+[2.477s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.479s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.479s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):
+[2.479s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[2.479s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[2.479s]   the cmake_policy command to set the policy and suppress this warning.
+[2.479s] 
+[2.479s] Call Stack (most recent call first):
+[2.479s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[2.479s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[2.480s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[2.480s]   CMakeLists.txt:39 (rosidl_generate_interfaces)
+[2.480s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.480s] [0m
+[2.496s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):
+[2.496s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[2.496s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[2.496s]   the cmake_policy command to set the policy and suppress this warning.
+[2.496s] 
+[2.496s] Call Stack (most recent call first):
+[2.496s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[2.497s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[2.497s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[2.497s]   CMakeLists.txt:39 (rosidl_generate_interfaces)
+[2.497s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.497s] [0m
+[2.505s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.505s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.505s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.505s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.523s] -- Found PythonExtra: .so  
+[2.592s] -- Found ament_cmake_flake8: 0.12.12 (/opt/ros/humble/share/ament_cmake_flake8/cmake)
+[2.594s] -- Found ament_cmake_pep257: 0.12.12 (/opt/ros/humble/share/ament_cmake_pep257/cmake)
+[2.597s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.612s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.612s] -- Added test 'lint_cmake' to check CMake code style
+[2.613s] -- Added test 'xmllint' to check XML markup files
+[2.616s] -- Configuring done (2.0s)
+[2.661s] -- Generating done (0.0s)
+[2.671s] -- Build files have been written to: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_scenario_runner_types
+[2.677s] Invoked command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_scenario_runner_types' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /opt/cmake-3.28.3-linux-x86_64/bin/cmake /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_ros_scenario_runner_types -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types
+[2.678s] Invoking command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_scenario_runner_types': CMAKE_PREFIX_PATH=/opt/ros/humble /opt/cmake-3.28.3-linux-x86_64/bin/cmake --build /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_scenario_runner_types -- -j12 -l12
+[2.695s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.697s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.698s] [  3%] Built target ament_cmake_python_symlink_carla_ros_scenario_runner_types
+[2.976s] running egg_info
+[2.976s] creating carla_ros_scenario_runner_types.egg-info
+[2.976s] writing carla_ros_scenario_runner_types.egg-info/PKG-INFO
+[2.976s] writing dependency_links to carla_ros_scenario_runner_types.egg-info/dependency_links.txt
+[2.976s] writing top-level names to carla_ros_scenario_runner_types.egg-info/top_level.txt
+[2.976s] writing manifest file 'carla_ros_scenario_runner_types.egg-info/SOURCES.txt'
+[2.978s] reading manifest file 'carla_ros_scenario_runner_types.egg-info/SOURCES.txt'
+[2.978s] writing manifest file 'carla_ros_scenario_runner_types.egg-info/SOURCES.txt'
+[2.997s] [  3%] Built target ament_cmake_python_build_carla_ros_scenario_runner_types_egg
+[3.055s] [  5%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_generator_c.dir/rosidl_generator_c/carla_ros_scenario_runner_types/msg/detail/carla_scenario__functions.c.o[0m
+[3.055s] [  7%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_generator_c.dir/rosidl_generator_c/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__functions.c.o[0m
+[3.056s] [  9%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_generator_c.dir/rosidl_generator_c/carla_ros_scenario_runner_types/srv/detail/execute_scenario__functions.c.o[0m
+[3.056s] [ 10%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_generator_c.dir/rosidl_generator_c/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__functions.c.o[0m
+[3.110s] [ 12%] [32m[1mLinking C shared library libcarla_ros_scenario_runner_types__rosidl_generator_c.so[0m
+[3.132s] [ 12%] Built target carla_ros_scenario_runner_types__rosidl_generator_c
+[3.137s] [ 14%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.137s] [ 16%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.138s] [ 18%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.221s] [ 18%] Built target carla_ros_scenario_runner_types__cpp
+[3.227s] [ 20%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.227s] [ 21%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.227s] [ 23%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[3.630s] [ 25%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_ros_scenario_runner_types/msg/carla_scenario__type_support.cpp.o[0m
+[3.634s] [ 27%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_ros_scenario_runner_types/msg/carla_scenario_list__type_support.cpp.o[0m
+[3.642s] [ 29%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_ros_scenario_runner_types/msg/carla_scenario_runner_status__type_support.cpp.o[0m
+[3.646s] [ 30%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_c.dir/rosidl_typesupport_c/carla_ros_scenario_runner_types/srv/execute_scenario__type_support.cpp.o[0m
+[3.680s] [ 32%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_ros_scenario_runner_types/msg/carla_scenario__type_support.cpp.o[0m
+[3.683s] [ 34%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_ros_scenario_runner_types/msg/carla_scenario_list__type_support.cpp.o[0m
+[3.683s] [ 36%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_ros_scenario_runner_types/msg/carla_scenario_runner_status__type_support.cpp.o[0m
+[3.688s] [ 38%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carla_ros_scenario_runner_types/srv/execute_scenario__type_support.cpp.o[0m
+[3.703s] [ 40%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_ros_scenario_runner_types/msg/detail/carla_scenario__type_support.c.o[0m
+[3.704s] [ 41%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__type_support.c.o[0m
+[3.715s] [ 43%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__type_support.c.o[0m
+[3.721s] [ 45%] [32m[1mLinking CXX shared library libcarla_ros_scenario_runner_types__rosidl_typesupport_c.so[0m
+[3.729s] [ 47%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carla_ros_scenario_runner_types/srv/detail/execute_scenario__type_support.c.o[0m
+[3.750s] [ 49%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_ros_scenario_runner_types/msg/detail/carla_scenario__type_support_c.cpp.o[0m
+[3.770s] [ 50%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__type_support_c.cpp.o[0m
+[3.785s] [ 52%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__type_support_c.cpp.o[0m
+[3.799s] [ 54%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carla_ros_scenario_runner_types/srv/detail/execute_scenario__type_support_c.cpp.o[0m
+[3.810s] [ 56%] [32m[1mLinking C shared library libcarla_ros_scenario_runner_types__rosidl_typesupport_introspection_c.so[0m
+[3.829s] [ 56%] Built target carla_ros_scenario_runner_types__rosidl_typesupport_c
+[3.832s] [ 58%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_ros_scenario_runner_types/msg/detail/carla_scenario__type_support.cpp.o[0m
+[3.838s] [ 60%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__type_support.cpp.o[0m
+[3.890s] [ 60%] Built target carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c
+[3.896s] [ 61%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__type_support.cpp.o[0m
+[3.901s] [ 63%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_ros_scenario_runner_types/msg/detail/dds_fastrtps/carla_scenario__type_support.cpp.o[0m
+[4.236s] [ 65%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_ros_scenario_runner_types/msg/detail/dds_fastrtps/carla_scenario_list__type_support.cpp.o[0m
+[4.260s] [ 67%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carla_ros_scenario_runner_types/srv/detail/execute_scenario__type_support.cpp.o[0m
+[4.271s] [ 69%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_ros_scenario_runner_types/msg/detail/dds_fastrtps/carla_scenario_runner_status__type_support.cpp.o[0m
+[4.330s] [ 70%] [32mBuilding CXX object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carla_ros_scenario_runner_types/srv/detail/dds_fastrtps/execute_scenario__type_support.cpp.o[0m
+[4.359s] [ 72%] [32m[1mLinking CXX shared library libcarla_ros_scenario_runner_types__rosidl_typesupport_cpp.so[0m
+[4.448s] [ 72%] Built target carla_ros_scenario_runner_types__rosidl_typesupport_cpp
+[4.643s] [ 74%] [32m[1mLinking CXX shared library libcarla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c.so[0m
+[4.734s] [ 76%] [32m[1mLinking CXX shared library libcarla_ros_scenario_runner_types__rosidl_typesupport_introspection_cpp.so[0m
+[4.768s] [ 76%] Built target carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c
+[4.842s] [ 76%] Built target carla_ros_scenario_runner_types__rosidl_typesupport_introspection_cpp
+[4.910s] [ 78%] [32m[1mLinking CXX shared library libcarla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.966s] [ 78%] Built target carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cpp
+[4.973s] [ 78%] Built target carla_ros_scenario_runner_types
+[4.980s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.522s] [ 80%] Built target carla_ros_scenario_runner_types__py
+[5.530s] [ 81%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_generator_py.dir/rosidl_generator_py/carla_ros_scenario_runner_types/msg/_carla_scenario_s.c.o[0m
+[5.531s] [ 83%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_generator_py.dir/rosidl_generator_py/carla_ros_scenario_runner_types/msg/_carla_scenario_list_s.c.o[0m
+[5.531s] [ 85%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_generator_py.dir/rosidl_generator_py/carla_ros_scenario_runner_types/msg/_carla_scenario_runner_status_s.c.o[0m
+[5.531s] [ 87%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_generator_py.dir/rosidl_generator_py/carla_ros_scenario_runner_types/srv/_execute_scenario_s.c.o[0m
+[5.669s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/carla_ros_scenario_runner_types/libcarla_ros_scenario_runner_types__rosidl_generator_py.so[0m
+[5.720s] [ 89%] Built target carla_ros_scenario_runner_types__rosidl_generator_py
+[5.734s] [ 90%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/carla_ros_scenario_runner_types/_carla_ros_scenario_runner_types_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[5.742s] [ 92%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/carla_ros_scenario_runner_types/_carla_ros_scenario_runner_types_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.747s] [ 94%] [32mBuilding C object CMakeFiles/carla_ros_scenario_runner_types__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/carla_ros_scenario_runner_types/_carla_ros_scenario_runner_types_s.ep.rosidl_typesupport_c.c.o[0m
+[6.002s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.011s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.013s] [100%] [32m[1mLinking C shared library rosidl_generator_py/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.064s] [100%] Built target carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c__pyext
+[6.070s] [100%] Built target carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c__pyext
+[6.077s] [100%] Built target carla_ros_scenario_runner_types__rosidl_typesupport_c__pyext
+[6.092s] Invoked command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_scenario_runner_types' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /opt/cmake-3.28.3-linux-x86_64/bin/cmake --build /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_scenario_runner_types -- -j12 -l12
+[6.100s] Invoking command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_scenario_runner_types': CMAKE_PREFIX_PATH=/opt/ros/humble /opt/cmake-3.28.3-linux-x86_64/bin/cmake --install /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_scenario_runner_types
+[6.107s] -- Install configuration: ""
+[6.112s] -- Execute custom install script
+[6.112s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/ament_index/resource_index/rosidl_interfaces/carla_ros_scenario_runner_types
+[6.119s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/carla_scenario.h
+[6.124s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/carla_scenario_list.h
+[6.131s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/carla_scenario_runner_status.h
+[6.133s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario__functions.h
+[6.136s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario__struct.h
+[6.142s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario__type_support.h
+[6.144s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__functions.h
+[6.151s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__struct.h
+[6.154s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__type_support.h
+[6.159s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__functions.h
+[6.168s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__struct.h
+[6.173s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__type_support.h
+[6.182s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/rosidl_generator_c__visibility_control.h
+[6.190s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/detail/execute_scenario__functions.h
+[6.193s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/detail/execute_scenario__struct.h
+[6.198s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/detail/execute_scenario__type_support.h
+[6.205s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/execute_scenario.h
+[6.212s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/environment/library_path.sh
+[6.216s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/environment/library_path.dsv
+[6.220s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario__rosidl_typesupport_fastrtps_c.h
+[6.227s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__rosidl_typesupport_fastrtps_c.h
+[6.233s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__rosidl_typesupport_fastrtps_c.h
+[6.241s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[6.244s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/detail/execute_scenario__rosidl_typesupport_fastrtps_c.h
+[6.254s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/carla_scenario.hpp
+[6.258s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/carla_scenario_list.hpp
+[6.262s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/carla_scenario_runner_status.hpp
+[6.266s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario__builder.hpp
+[6.270s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario__struct.hpp
+[6.273s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario__traits.hpp
+[6.277s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario__type_support.hpp
+[6.283s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__builder.hpp
+[6.286s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__struct.hpp
+[6.292s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__traits.hpp
+[6.296s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__type_support.hpp
+[6.301s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__builder.hpp
+[6.304s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__struct.hpp
+[6.310s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__traits.hpp
+[6.316s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__type_support.hpp
+[6.319s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/rosidl_generator_cpp__visibility_control.hpp
+[6.325s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/detail/execute_scenario__builder.hpp
+[6.330s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/detail/execute_scenario__struct.hpp
+[6.335s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/detail/execute_scenario__traits.hpp
+[6.341s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/detail/execute_scenario__type_support.hpp
+[6.344s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/execute_scenario.hpp
+[6.353s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario__rosidl_typesupport_fastrtps_cpp.hpp
+[6.360s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__rosidl_typesupport_fastrtps_cpp.hpp
+[6.361s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__rosidl_typesupport_fastrtps_cpp.hpp
+[6.367s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[6.373s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/detail/execute_scenario__rosidl_typesupport_fastrtps_cpp.hpp
+[6.381s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario__rosidl_typesupport_introspection_c.h
+[6.386s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__rosidl_typesupport_introspection_c.h
+[6.392s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__rosidl_typesupport_introspection_c.h
+[6.399s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[6.403s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/detail/execute_scenario__rosidl_typesupport_introspection_c.h
+[6.411s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario__rosidl_typesupport_introspection_cpp.hpp
+[6.419s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_list__rosidl_typesupport_introspection_cpp.hpp
+[6.426s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/msg/detail/carla_scenario_runner_status__rosidl_typesupport_introspection_cpp.hpp
+[6.430s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/include/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types/srv/detail/execute_scenario__rosidl_typesupport_introspection_cpp.hpp
+[6.433s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/environment/pythonpath.sh
+[6.441s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/environment/pythonpath.dsv
+[6.447s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types-0.1.0-py3.10.egg-info/PKG-INFO
+[6.455s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types-0.1.0-py3.10.egg-info/SOURCES.txt
+[6.460s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types-0.1.0-py3.10.egg-info/dependency_links.txt
+[6.465s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types-0.1.0-py3.10.egg-info/top_level.txt
+[6.471s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/__init__.py
+[6.472s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/_carla_ros_scenario_runner_types_s.ep.rosidl_typesupport_c.c
+[6.474s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/_carla_ros_scenario_runner_types_s.ep.rosidl_typesupport_fastrtps_c.c
+[6.478s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/_carla_ros_scenario_runner_types_s.ep.rosidl_typesupport_introspection_c.c
+[6.482s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[6.486s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[6.490s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[6.493s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/libcarla_ros_scenario_runner_types__rosidl_generator_py.so
+[6.499s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/msg/__init__.py
+[6.503s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/msg/_carla_scenario.py
+[6.508s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/msg/_carla_scenario_list.py
+[6.515s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/msg/_carla_scenario_list_s.c
+[6.523s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/msg/_carla_scenario_runner_status.py
+[6.527s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/msg/_carla_scenario_runner_status_s.c
+[6.532s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/msg/_carla_scenario_s.c
+[6.538s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/srv/__init__.py
+[6.543s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/srv/_execute_scenario.py
+[6.546s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/srv/_execute_scenario_s.c
+[6.553s] -- Up-to-date symlink: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[6.555s] -- Up-to-date symlink: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[6.555s] -- Up-to-date symlink: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[6.555s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/msg/CarlaScenario.idl
+[6.559s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/msg/CarlaScenarioList.idl
+[6.562s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/msg/CarlaScenarioRunnerStatus.idl
+[6.573s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/srv/ExecuteScenario.idl
+[6.578s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/msg/CarlaScenario.msg
+[6.584s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/msg/CarlaScenarioList.msg
+[6.593s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/msg/CarlaScenarioRunnerStatus.msg
+[6.599s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/srv/ExecuteScenario.srv
+[6.605s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/srv/ExecuteScenario_Request.msg
+[6.608s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/srv/ExecuteScenario_Response.msg
+[6.612s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/ament_index/resource_index/package_run_dependencies/carla_ros_scenario_runner_types
+[6.615s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/ament_index/resource_index/parent_prefix_path/carla_ros_scenario_runner_types
+[6.619s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/environment/ament_prefix_path.sh
+[6.622s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/environment/ament_prefix_path.dsv
+[6.627s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/environment/path.sh
+[6.630s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/environment/path.dsv
+[6.634s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/local_setup.bash
+[6.640s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/local_setup.sh
+[6.644s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/local_setup.zsh
+[6.647s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/local_setup.dsv
+[6.656s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/package.dsv
+[6.658s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/ament_index/resource_index/packages/carla_ros_scenario_runner_types
+[6.661s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/rosidl_cmake-extras.cmake
+[6.664s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.667s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.671s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/ament_cmake_export_libraries-extras.cmake
+[6.679s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/ament_cmake_export_targets-extras.cmake
+[6.680s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[6.683s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[6.687s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/carla_ros_scenario_runner_typesConfig.cmake
+[6.692s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/carla_ros_scenario_runner_typesConfig-version.cmake
+[6.697s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/package.xml
+[6.700s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_generator_c.so
+[6.701s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_generator_c.so" to ""
+[6.701s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c.so
+[6.702s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c.so" to ""
+[6.702s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cpp.so
+[6.703s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cpp.so" to ""
+[6.704s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_typesupport_introspection_c.so
+[6.707s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_typesupport_introspection_c.so" to ""
+[6.707s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_typesupport_c.so
+[6.707s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_typesupport_c.so" to ""
+[6.707s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_typesupport_introspection_cpp.so
+[6.709s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_typesupport_introspection_cpp.so" to ""
+[6.710s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_typesupport_cpp.so
+[6.712s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_typesupport_cpp.so" to ""
+[6.764s] Listing '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types'...
+[6.764s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/__init__.py'...
+[6.764s] Listing '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/msg'...
+[6.764s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/msg/__init__.py'...
+[6.764s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/msg/_carla_scenario.py'...
+[6.764s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/msg/_carla_scenario_list.py'...
+[6.764s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/msg/_carla_scenario_runner_status.py'...
+[6.764s] Listing '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/srv'...
+[6.764s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/srv/__init__.py'...
+[6.764s] Compiling '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/local/lib/python3.10/dist-packages/carla_ros_scenario_runner_types/srv/_execute_scenario.py'...
+[6.782s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_generator_py.so
+[6.782s] -- Set non-toolchain portion of runtime path of "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/lib/libcarla_ros_scenario_runner_types__rosidl_generator_py.so" to ""
+[6.782s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/export_carla_ros_scenario_runner_types__rosidl_generator_cExport.cmake
+[6.782s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/export_carla_ros_scenario_runner_types__rosidl_generator_cExport-noconfig.cmake
+[6.783s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/export_carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cExport.cmake
+[6.783s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/export_carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[6.783s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/export_carla_ros_scenario_runner_types__rosidl_generator_cppExport.cmake
+[6.783s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/export_carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cppExport.cmake
+[6.784s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/export_carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[6.784s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_cExport.cmake
+[6.784s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[6.784s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/carla_ros_scenario_runner_types__rosidl_typesupport_cExport.cmake
+[6.785s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/carla_ros_scenario_runner_types__rosidl_typesupport_cExport-noconfig.cmake
+[6.785s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_cppExport.cmake
+[6.785s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/carla_ros_scenario_runner_types__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[6.785s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/carla_ros_scenario_runner_types__rosidl_typesupport_cppExport.cmake
+[6.786s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/carla_ros_scenario_runner_types__rosidl_typesupport_cppExport-noconfig.cmake
+[6.786s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/export_carla_ros_scenario_runner_types__rosidl_generator_pyExport.cmake
+[6.788s] -- Installing: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_scenario_runner_types/share/carla_ros_scenario_runner_types/cmake/export_carla_ros_scenario_runner_types__rosidl_generator_pyExport-noconfig.cmake
+[6.793s] Invoked command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_scenario_runner_types' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /opt/cmake-3.28.3-linux-x86_64/bin/cmake --install /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_scenario_runner_types

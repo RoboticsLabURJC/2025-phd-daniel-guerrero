@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-09579565679149b52921.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "carla_msgs__py",
+					"jsonFile" : "directory-carla_msgs__py-7431ba2fd096ef1efd56.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs/carla_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "carla_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_carla_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_carla_msgs_egg-05c628f25c5861c35b20.json",
+					"name" : "ament_cmake_python_build_carla_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_carla_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_carla_msgs-a0ddb587183b5089e8b8.json",
+					"name" : "ament_cmake_python_symlink_carla_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs-e437938c724e6efded70.json",
+					"name" : "carla_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs__cpp-fb39594de91917f3c04e.json",
+					"name" : "carla_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "carla_msgs__py::@a64ccbca508918e45018",
+					"jsonFile" : "target-carla_msgs__py-7f4825c81da212a57e5f.json",
+					"name" : "carla_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs__rosidl_generator_c-c5657591d624d937ec9f.json",
+					"name" : "carla_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs__rosidl_generator_py-b47dd7e7828d5507524e.json",
+					"name" : "carla_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs__rosidl_typesupport_c-99d9af96ff2219ab27a3.json",
+					"name" : "carla_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs__rosidl_typesupport_c__pyext-f74a8572bba65917d3f8.json",
+					"name" : "carla_msgs__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs__rosidl_typesupport_cpp-befb936308af722898eb.json",
+					"name" : "carla_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs__rosidl_typesupport_fastrtps_c-5e9baab8d05287eeea9a.json",
+					"name" : "carla_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs__rosidl_typesupport_fastrtps_c__pyext-fb30363ee35bb751b186.json",
+					"name" : "carla_msgs__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs__rosidl_typesupport_fastrtps_cpp-9c4236441ab842c9f344.json",
+					"name" : "carla_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs__rosidl_typesupport_introspection_c-df2a76ab1a3e9d3bf9df.json",
+					"name" : "carla_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs__rosidl_typesupport_introspection_c__pyext-e57c815de9374426fe81.json",
+					"name" : "carla_msgs__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs__rosidl_typesupport_introspection_cpp-af828df48cb2413605cf.json",
+					"name" : "carla_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_msgs_uninstall-2c046e6364af2a717226.json",
+					"name" : "carla_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-61504d67667732d56360.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs",
+		"source" : "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,30 @@
+[1.877s] Invoking command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects': AMENT_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs LD_LIBRARY_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/ros_compatibility/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects/build --no-deps symlink_data
+[2.204s] running develop
+[2.362s] running egg_info
+[2.362s] creating carla_spawn_objects.egg-info
+[2.362s] writing carla_spawn_objects.egg-info/PKG-INFO
+[2.362s] writing dependency_links to carla_spawn_objects.egg-info/dependency_links.txt
+[2.362s] writing entry points to carla_spawn_objects.egg-info/entry_points.txt
+[2.362s] writing requirements to carla_spawn_objects.egg-info/requires.txt
+[2.362s] writing top-level names to carla_spawn_objects.egg-info/top_level.txt
+[2.363s] writing manifest file 'carla_spawn_objects.egg-info/SOURCES.txt'
+[2.364s] reading manifest file 'carla_spawn_objects.egg-info/SOURCES.txt'
+[2.364s] writing manifest file 'carla_spawn_objects.egg-info/SOURCES.txt'
+[2.397s] running build_ext
+[2.397s] Creating /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/lib/python3.10/site-packages/carla-spawn-objects.egg-link (link to .)
+[2.398s] Installing carla_spawn_objects script to /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/lib/carla_spawn_objects
+[2.398s] Installing set_initial_pose script to /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/lib/carla_spawn_objects
+[2.398s] 
+[2.398s] Installed /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects
+[2.398s] running symlink_data
+[2.398s] creating /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/share/ament_index
+[2.398s] creating /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/share/ament_index/resource_index
+[2.399s] creating /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/share/ament_index/resource_index/packages
+[2.399s] symbolically linking /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects/resource/carla_spawn_objects -> /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/share/ament_index/resource_index/packages
+[2.399s] symbolically linking /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects/package.xml -> /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/share/carla_spawn_objects
+[2.399s] creating /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/share/carla_spawn_objects/config
+[2.399s] symbolically linking /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects/config/objects.json -> /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/share/carla_spawn_objects/config
+[2.399s] symbolically linking /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects/launch/carla_spawn_objects.launch.py -> /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/share/carla_spawn_objects
+[2.399s] symbolically linking /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects/launch/carla_example_ego_vehicle.launch.py -> /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/share/carla_spawn_objects
+[2.399s] symbolically linking /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects/launch/set_initial_pose.launch.py -> /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/share/carla_spawn_objects
+[2.436s] Invoked command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects' returned '0': AMENT_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs LD_LIBRARY_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/ros_compatibility/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects/build --no-deps symlink_data

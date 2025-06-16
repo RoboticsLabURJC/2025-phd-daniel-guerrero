@@ -1,0 +1,24 @@
+---
+title: Week 8 - Resolviendo errores con Carla
+    -weekly Log
+tags:
+    - CARLA
+    - ROS2 Bridge
+---
+# Blocker actual con Carla y Rosbridge no se muestra
+
+Esta semana avancé en la configuración de ROS2 Bridge para Carla.
+
+1.  **Problema con carla y ROS Bridge Resuelto:**
+    Con los comentarios que me compartio Carlos se pudo resolver la comunicación de ROS Bridge con el simulador.
+    ![Simulación](image13.png)
+
+2.  **Topicos de Carla:**
+    Al parecer los topicos existen y tienen informacion:
+    ![Topicos](image14.png)
+    
+3.  **Al intentar obtener la información el simuador crashea**
+    Sale un mensaje de error al intentar publicar o suscribirse a los topicos del simulador.
+    Posiblemente mi hardware no sea compatible.
+    ![Error MSG](image15.png)
+

@@ -1,0 +1,1 @@
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ackermann_msgs/rosidl_typesupport_introspection_c/carla_ackermann_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h

@@ -1,0 +1,40 @@
+[0.012s] Invoking command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/ros_compatibility': /opt/cmake-3.28.3-linux-x86_64/bin/cmake /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/ros_compatibility -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility
+[0.025s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.025s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[0.025s]   CMake.
+[0.025s] 
+[0.026s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.026s]   CMake that the project does not need compatibility with older versions.
+[0.026s] 
+[0.026s] [0m
+[0.107s] -- The C compiler identification is GNU 11.4.0
+[0.196s] -- The CXX compiler identification is GNU 7.5.0
+[0.213s] -- Detecting C compiler ABI info
+[0.272s] -- Detecting C compiler ABI info - done
+[0.283s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.283s] -- Detecting C compile features
+[0.284s] -- Detecting C compile features - done
+[0.296s] -- Detecting CXX compiler ABI info
+[0.362s] -- Detecting CXX compiler ABI info - done
+[0.375s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.376s] -- Detecting CXX compile features
+[0.377s] -- Detecting CXX compile features - done
+[0.390s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.390s]   By not providing "Findros_environment.cmake" in CMAKE_MODULE_PATH this
+[0.390s]   project has asked CMake to find a package configuration file provided by
+[0.390s]   "ros_environment", but CMake did not find one.
+[0.390s] 
+[0.390s]   Could not find a package configuration file provided by "ros_environment"
+[0.390s]   with any of the following names:
+[0.390s] 
+[0.390s]     ros_environmentConfig.cmake
+[0.390s]     ros_environment-config.cmake
+[0.390s] 
+[0.390s]   Add the installation prefix of "ros_environment" to CMAKE_PREFIX_PATH or
+[0.390s]   set "ros_environment_DIR" to a directory containing one of the above files.
+[0.391s]   If "ros_environment" provides a separate development package or SDK, be
+[0.391s]   sure it has been installed.
+[0.391s] 
+[0.391s] [0m
+[0.391s] -- Configuring incomplete, errors occurred!
+[0.394s] Invoked command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/ros_compatibility' returned '1': /opt/cmake-3.28.3-linux-x86_64/bin/cmake /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/ros_compatibility -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility

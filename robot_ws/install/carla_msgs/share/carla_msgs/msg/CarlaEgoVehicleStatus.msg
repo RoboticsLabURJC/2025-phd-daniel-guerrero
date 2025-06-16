@@ -1,0 +1,1 @@
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_msgs/msg/CarlaEgoVehicleStatus.msg

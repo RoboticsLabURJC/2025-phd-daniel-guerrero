@@ -1,0 +1,39 @@
+[0.012s] Invoking command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_twist_to_control': /opt/cmake-3.28.3-linux-x86_64/bin/cmake /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_twist_to_control -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_twist_to_control
+[0.023s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.023s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[0.023s]   CMake.
+[0.023s] 
+[0.023s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.023s]   CMake that the project does not need compatibility with older versions.
+[0.023s] 
+[0.023s] [0m
+[0.102s] -- The C compiler identification is GNU 11.4.0
+[0.198s] -- The CXX compiler identification is GNU 7.5.0
+[0.212s] -- Detecting C compiler ABI info
+[0.268s] -- Detecting C compiler ABI info - done
+[0.284s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.284s] -- Detecting C compile features
+[0.285s] -- Detecting C compile features - done
+[0.297s] -- Detecting CXX compiler ABI info
+[0.365s] -- Detecting CXX compiler ABI info - done
+[0.381s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.382s] -- Detecting CXX compile features
+[0.383s] -- Detecting CXX compile features - done
+[0.395s] -- Configuring incomplete, errors occurred!
+[0.395s] [31mCMake Error at CMakeLists.txt:4 (find_package):
+[0.395s]   By not providing "Findros_environment.cmake" in CMAKE_MODULE_PATH this
+[0.396s]   project has asked CMake to find a package configuration file provided by
+[0.396s]   "ros_environment", but CMake did not find one.
+[0.396s] 
+[0.396s]   Could not find a package configuration file provided by "ros_environment"
+[0.396s]   with any of the following names:
+[0.396s] 
+[0.396s]     ros_environmentConfig.cmake
+[0.396s]     ros_environment-config.cmake
+[0.396s] 
+[0.396s]   Add the installation prefix of "ros_environment" to CMAKE_PREFIX_PATH or
+[0.396s]   set "ros_environment_DIR" to a directory containing one of the above files.
+[0.396s]   If "ros_environment" provides a separate development package or SDK, be
+[0.396s]   sure it has been installed.
+[0.396s] 
+[0.396s] [0m

@@ -1,0 +1,10 @@
+{
+  "package_name": "carla_ackermann_msgs",
+  "non_idl_tuples": [
+    "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_ackermann_msgs:msg/EgoVehicleControlInfo.msg",
+    "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_ackermann_msgs:msg/EgoVehicleControlCurrent.msg",
+    "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_ackermann_msgs:msg/EgoVehicleControlMaxima.msg",
+    "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_ackermann_msgs:msg/EgoVehicleControlStatus.msg",
+    "/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_ackermann_msgs:msg/EgoVehicleControlTarget.msg"
+  ]
+}

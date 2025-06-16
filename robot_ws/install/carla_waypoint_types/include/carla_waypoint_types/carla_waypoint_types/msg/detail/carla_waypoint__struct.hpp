@@ -1,0 +1,1 @@
+/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_waypoint_types/rosidl_generator_cpp/carla_waypoint_types/msg/detail/carla_waypoint__struct.hpp

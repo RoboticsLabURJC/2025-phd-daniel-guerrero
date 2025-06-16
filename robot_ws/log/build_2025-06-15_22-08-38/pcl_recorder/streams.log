@@ -1,0 +1,185 @@
+[0.015s] Invoking command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder': AMENT_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_bridge:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_manual_control:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_bridge/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_bridge/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_manual_control/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_manual_control/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/ros_compatibility/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_common/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_common/lib/python3.10/site-packages:${PYTHONPATH} /opt/cmake-3.28.3-linux-x86_64/bin/cmake /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/pcl_recorder -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder
+[0.017s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.017s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[0.017s]   CMake.
+[0.017s] 
+[0.017s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.017s]   CMake that the project does not need compatibility with older versions.
+[0.017s] 
+[0.017s] [0m
+[0.068s] -- The C compiler identification is GNU 11.4.0
+[0.137s] -- The CXX compiler identification is GNU 7.5.0
+[0.155s] -- Detecting C compiler ABI info
+[0.221s] -- Detecting C compiler ABI info - done
+[0.233s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.234s] -- Detecting C compile features
+[0.234s] -- Detecting C compile features - done
+[0.250s] -- Detecting CXX compiler ABI info
+[0.348s] -- Detecting CXX compiler ABI info - done
+[0.360s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.360s] -- Detecting CXX compile features
+[0.361s] -- Detecting CXX compile features - done
+[0.364s] -- Found ros_environment: 3.2.2 (/opt/ros/humble/share/ros_environment/cmake)
+[0.366s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.546s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.632s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.700s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.812s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.819s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.835s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.852s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.880s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.957s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.961s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.123s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.181s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.285s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.305s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.437s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.439s] -- Found Threads: TRUE  
+[1.539s] -- Found rclcpp_components: 16.0.12 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.577s] -- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.618s] -- Found tf2: 0.25.12 (/opt/ros/humble/share/tf2/cmake)
+[1.624s] -- Found tf2_eigen: 0.25.12 (/opt/ros/humble/share/tf2_eigen/cmake)
+[1.720s] -- Found tf2_geometry_msgs: 0.25.12 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.728s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.730s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.730s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.733s] -- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)
+[1.773s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:146 (find_package):
+[1.773s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[1.773s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[1.773s]   cmake_policy command to set the policy and suppress this warning.
+[1.774s] 
+[1.774s]   CMake variable EIGEN_ROOT is set to:
+[1.774s] 
+[1.774s]     /usr/include/eigen3
+[1.774s] 
+[1.774s]   For compatibility, find_package is ignoring the variable, but code in a
+[1.774s]   .cmake module might still use it.
+[1.774s] Call Stack (most recent call first):
+[1.774s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:299 (find_eigen)
+[1.774s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[1.774s]   /opt/ros/humble/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.774s]   /opt/ros/humble/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[1.774s]   CMakeLists.txt:56 (find_package)
+[1.775s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.775s] [0m
+[1.777s] -- Checking for module 'eigen3'
+[1.787s] --   Found eigen3, version 3.4.0
+[1.811s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[1.811s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.839s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:44 (find_package):
+[1.839s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[1.839s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[1.839s]   cmake_policy command to set the policy and suppress this warning.
+[1.839s] 
+[1.839s]   CMake variable FLANN_ROOT is set to:
+[1.839s] 
+[1.839s]     /usr
+[1.839s] 
+[1.839s]   For compatibility, find_package is ignoring the variable, but code in a
+[1.839s]   .cmake module might still use it.
+[1.839s] Call Stack (most recent call first):
+[1.839s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:256 (find_package)
+[1.839s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:301 (find_flann)
+[1.840s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[1.840s]   /opt/ros/humble/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.840s]   /opt/ros/humble/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[1.840s]   CMakeLists.txt:56 (find_package)
+[1.840s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.840s] [0m
+[1.854s] -- Checking for module 'flann'
+[1.864s] --   Found flann, version 1.9.1
+[1.897s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[1.897s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[2.802s] -- Checking for module 'libusb-1.0'
+[2.815s] --   Found libusb-1.0, version 1.0.25
+[2.844s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[2.846s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.892s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[3.159s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[3.165s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.172s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[3.420s] -- Found Qhull version 8.0.2
+[3.676s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.926s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[3.927s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[3.928s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[3.929s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[3.930s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[3.931s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[3.931s] -- Found PCL_2D: /usr/include/pcl-1.12  
+[3.932s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.12  
+[3.933s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[3.934s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[3.935s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[3.936s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[3.937s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[3.938s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[3.939s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[3.940s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[3.941s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[3.943s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[3.944s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[3.945s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[3.946s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  
+[3.946s] -- Found PCL_MODELER: /usr/include/pcl-1.12  
+[3.947s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  
+[3.948s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[3.949s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[3.955s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system 
+[3.955s] [33mCMake Warning (dev) at CMakeLists.txt:62 (find_package):
+[3.955s]   Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+[3.956s]   Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+[3.956s]   command to set the policy and suppress this warning.
+[3.956s] 
+[3.956s]   CMake variable PCL_ROOT is set to:
+[3.956s] 
+[3.956s]     /usr
+[3.956s] 
+[3.956s]   For compatibility, CMake is ignoring the variable.
+[3.956s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[3.956s] [0m
+[4.033s] -- Configuring done (4.0s)
+[4.086s] -- Generating done (0.0s)
+[4.091s] -- Build files have been written to: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder
+[4.105s] Invoked command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder' returned '0': AMENT_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_bridge:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_manual_control:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_bridge/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_bridge/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_manual_control/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_manual_control/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/ros_compatibility/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_common/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_common/lib/python3.10/site-packages:${PYTHONPATH} /opt/cmake-3.28.3-linux-x86_64/bin/cmake /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/pcl_recorder -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder
+[4.108s] Invoking command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder': AMENT_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_bridge:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_manual_control:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_bridge/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_bridge/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_manual_control/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_manual_control/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/ros_compatibility/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_common/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_common/lib/python3.10/site-packages:${PYTHONPATH} /opt/cmake-3.28.3-linux-x86_64/bin/cmake --build /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder -- -j12 -l12
+[4.129s] [ 33%] [32mBuilding CXX object CMakeFiles/pcl_recorder_node.dir/src/PclRecorderROS2.cpp.o[0m
+[4.130s] [ 66%] [32mBuilding CXX object CMakeFiles/pcl_recorder_node.dir/src/mainROS2.cpp.o[0m
+[5.533s] In file included from [01m[K/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/pcl_recorder/include/PclRecorderROS2.h:13:0[m[K,
+[5.533s]                  from [01m[K/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/pcl_recorder/src/mainROS2.cpp:7[m[K:
+[5.534s] [01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_eigen/tf2_eigen.hpp instead [[01;35m[K-Wcpp[m[K]
+[5.534s]  #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_eigen/tf2_eigen.hpp instead
+[5.534s]   [01;35m[K^~~~~~~[m[K
+[5.795s] In file included from [01m[K/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/pcl_recorder/include/PclRecorderROS2.h:13:0[m[K,
+[5.795s]                  from [01m[K/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/pcl_recorder/src/PclRecorderROS2.cpp:13[m[K:
+[5.795s] [01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_eigen/tf2_eigen.hpp instead [[01;35m[K-Wcpp[m[K]
+[5.795s]  #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_eigen/tf2_eigen.hpp instead
+[5.795s]   [01;35m[K^~~~~~~[m[K
+[14.337s] [100%] [32m[1mLinking CXX executable pcl_recorder_node[0m
+[15.031s] [100%] Built target pcl_recorder_node
+[15.035s] Invoked command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder' returned '0': AMENT_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_bridge:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_manual_control:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_bridge/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_bridge/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_manual_control/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_manual_control/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/ros_compatibility/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_common/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_common/lib/python3.10/site-packages:${PYTHONPATH} /opt/cmake-3.28.3-linux-x86_64/bin/cmake --build /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder -- -j12 -l12
+[15.037s] Invoking command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder': AMENT_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_bridge:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_manual_control:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_bridge/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_bridge/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_manual_control/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_manual_control/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/ros_compatibility/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_common/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_common/lib/python3.10/site-packages:${PYTHONPATH} /opt/cmake-3.28.3-linux-x86_64/bin/cmake --install /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder
+[15.038s] -- Install configuration: ""
+[15.038s] -- Execute custom install script
+[15.039s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/lib/pcl_recorder/pcl_recorder_node
+[15.041s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder//pcl_recorder.launch
+[15.043s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder//pcl_recorder.launch.py
+[15.045s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/ament_index/resource_index/package_run_dependencies/pcl_recorder
+[15.047s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/ament_index/resource_index/parent_prefix_path/pcl_recorder
+[15.049s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder/environment/ament_prefix_path.sh
+[15.050s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder/environment/ament_prefix_path.dsv
+[15.053s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder/environment/path.sh
+[15.055s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder/environment/path.dsv
+[15.057s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder/local_setup.bash
+[15.059s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder/local_setup.sh
+[15.061s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder/local_setup.zsh
+[15.063s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder/local_setup.dsv
+[15.065s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder/package.dsv
+[15.066s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/ament_index/resource_index/packages/pcl_recorder
+[15.068s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder/cmake/pcl_recorderConfig.cmake
+[15.070s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder/cmake/pcl_recorderConfig-version.cmake
+[15.072s] -- Symlinking: /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/pcl_recorder/share/pcl_recorder/package.xml
+[15.075s] Invoked command in '/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder' returned '0': AMENT_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_bridge:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_manual_control:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_bridge/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_ros_bridge/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_spawn_objects/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_manual_control/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_manual_control/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/ros_compatibility/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/ros_compatibility/lib/python3.10/site-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_common/src:/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/install/carla_common/lib/python3.10/site-packages:${PYTHONPATH} /opt/cmake-3.28.3-linux-x86_64/bin/cmake --install /home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/pcl_recorder
