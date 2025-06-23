@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_waypoint_types/rosidl_typesupport_fastrtps_c/carla_waypoint_types/srv/detail/get_waypoint__rosidl_typesupport_fastrtps_c.h

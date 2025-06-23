@@ -1,0 +1,1 @@
+/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_ad_demo/ament_cmake_core/carla_ad_demoConfig-version.cmake

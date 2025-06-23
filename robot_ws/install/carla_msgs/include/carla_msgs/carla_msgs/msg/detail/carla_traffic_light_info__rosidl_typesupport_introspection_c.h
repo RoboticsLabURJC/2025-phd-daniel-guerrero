@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs/rosidl_typesupport_introspection_c/carla_msgs/msg/detail/carla_traffic_light_info__rosidl_typesupport_introspection_c.h

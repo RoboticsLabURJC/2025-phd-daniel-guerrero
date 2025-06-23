@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "carla_msgs__py",
+		"source" : "/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_msgs/carla_msgs__py"
+	}
+}

@@ -1,0 +1,1 @@
+/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_msgs/rosidl_generator_c/carla_msgs/msg/carla_status.h

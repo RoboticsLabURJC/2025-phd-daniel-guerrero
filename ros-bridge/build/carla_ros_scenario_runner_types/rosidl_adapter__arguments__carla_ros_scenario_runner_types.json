@@ -1,0 +1,9 @@
+{
+  "package_name": "carla_ros_scenario_runner_types",
+  "non_idl_tuples": [
+    "/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/src/carla_ros_scenario_runner_types:msg/CarlaScenario.msg",
+    "/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/src/carla_ros_scenario_runner_types:msg/CarlaScenarioList.msg",
+    "/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/src/carla_ros_scenario_runner_types:msg/CarlaScenarioRunnerStatus.msg",
+    "/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/src/carla_ros_scenario_runner_types:srv/ExecuteScenario.srv"
+  ]
+}

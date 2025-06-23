@@ -1,0 +1,1 @@
+/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_ackermann_msgs/ament_cmake_python/carla_ackermann_msgs/carla_ackermann_msgs.egg-info/dependency_links.txt

@@ -1,0 +1,4 @@
+[console_scripts]
+camera_node = carla_control_camera.camera_node:main
+control_node = carla_control_camera.control_node:main
+

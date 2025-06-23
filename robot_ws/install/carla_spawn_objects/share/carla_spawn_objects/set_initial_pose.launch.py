@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_spawn_objects/launch/set_initial_pose.launch.py

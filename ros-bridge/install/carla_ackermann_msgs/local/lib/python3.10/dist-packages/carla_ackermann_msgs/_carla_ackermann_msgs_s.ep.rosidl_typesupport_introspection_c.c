@@ -1,0 +1,1 @@
+/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_ackermann_msgs/rosidl_generator_py/carla_ackermann_msgs/_carla_ackermann_msgs_s.ep.rosidl_typesupport_introspection_c.c

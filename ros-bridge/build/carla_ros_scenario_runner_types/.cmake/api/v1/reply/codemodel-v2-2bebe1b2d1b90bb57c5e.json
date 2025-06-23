@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-8cc4dc02b377a2b26681.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "carla_ros_scenario_runner_types__py",
+					"jsonFile" : "directory-carla_ros_scenario_runner_types__py-d0c62f685d258294425a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_ros_scenario_runner_types/carla_ros_scenario_runner_types__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "carla_ros_scenario_runner_types",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_carla_ros_scenario_runner_types_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_carla_ros_scenario_runner_types_egg-b0b63d50ded883244220.json",
+					"name" : "ament_cmake_python_build_carla_ros_scenario_runner_types_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_carla_ros_scenario_runner_types::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_carla_ros_scenario_runner_types-bbafcaea6a623c18454d.json",
+					"name" : "ament_cmake_python_symlink_carla_ros_scenario_runner_types",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types-786a4e0836b19125a610.json",
+					"name" : "carla_ros_scenario_runner_types",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__cpp-d8f9582dfefcbeddc7bd.json",
+					"name" : "carla_ros_scenario_runner_types__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "carla_ros_scenario_runner_types__py::@8e8662100468231509b5",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__py-f186a571cc8243b95362.json",
+					"name" : "carla_ros_scenario_runner_types__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__rosidl_generator_c-e09fb65692625fd64d14.json",
+					"name" : "carla_ros_scenario_runner_types__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__rosidl_generator_py-6036de317cce27c4009c.json",
+					"name" : "carla_ros_scenario_runner_types__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__rosidl_typesupport_c-387ec9f54fc17e47d6c1.json",
+					"name" : "carla_ros_scenario_runner_types__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__rosidl_typesupport_c__pyext-44f519f954650c28db86.json",
+					"name" : "carla_ros_scenario_runner_types__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__rosidl_typesupport_cpp-58f331f436bff25904aa.json",
+					"name" : "carla_ros_scenario_runner_types__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c-db6d6c398483070d2312.json",
+					"name" : "carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c__pyext-d3e3ffd12643c7f31d39.json",
+					"name" : "carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cpp-85291ee27ffccda7533d.json",
+					"name" : "carla_ros_scenario_runner_types__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c-616213df9271a1bd2ecc.json",
+					"name" : "carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c__pyext-b0925314b3fe70f81a47.json",
+					"name" : "carla_ros_scenario_runner_types__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types__rosidl_typesupport_introspection_cpp-663b51fc365711e24653.json",
+					"name" : "carla_ros_scenario_runner_types__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_ros_scenario_runner_types_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_ros_scenario_runner_types_uninstall-b7fdc37da3234b1a4b81.json",
+					"name" : "carla_ros_scenario_runner_types_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-b0088a8a5aed7b0e88cd.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_ros_scenario_runner_types",
+		"source" : "/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/src/carla_ros_scenario_runner_types"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

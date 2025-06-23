@@ -1,0 +1,1 @@
+/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_waypoint_types/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake

@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs/rosidl_cmake/srv/GetBlueprints_Response.msg

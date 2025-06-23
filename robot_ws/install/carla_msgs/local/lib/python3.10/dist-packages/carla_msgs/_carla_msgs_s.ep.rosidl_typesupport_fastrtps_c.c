@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_msgs/rosidl_generator_py/carla_msgs/_carla_msgs_s.ep.rosidl_typesupport_fastrtps_c.c

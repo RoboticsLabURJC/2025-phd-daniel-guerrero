@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_twist_to_control/launch/carla_twist_to_control.launch.py

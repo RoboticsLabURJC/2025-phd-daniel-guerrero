@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_ros_scenario_runner_types/rosidl_generator_py/carla_ros_scenario_runner_types/msg/_carla_scenario_list_s.c

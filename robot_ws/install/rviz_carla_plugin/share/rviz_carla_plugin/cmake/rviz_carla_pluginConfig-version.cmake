@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/rviz_carla_plugin/ament_cmake_core/rviz_carla_pluginConfig-version.cmake

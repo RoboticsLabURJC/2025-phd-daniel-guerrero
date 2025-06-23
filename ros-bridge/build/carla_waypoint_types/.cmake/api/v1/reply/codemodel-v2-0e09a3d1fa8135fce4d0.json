@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-84fffa8338a943e2b693.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "carla_waypoint_types__py",
+					"jsonFile" : "directory-carla_waypoint_types__py-0fdee40f8d0a1a74cab2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_waypoint_types/carla_waypoint_types__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "carla_waypoint_types",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_carla_waypoint_types_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_carla_waypoint_types_egg-4e6959bd4fca396acb7b.json",
+					"name" : "ament_cmake_python_build_carla_waypoint_types_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_carla_waypoint_types::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_carla_waypoint_types-1c9482d7af7c5dd183fb.json",
+					"name" : "ament_cmake_python_symlink_carla_waypoint_types",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types-a006735e097a65857a28.json",
+					"name" : "carla_waypoint_types",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types__cpp-7ff11391152d9c79f957.json",
+					"name" : "carla_waypoint_types__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "carla_waypoint_types__py::@772a690aa71f82ebd252",
+					"jsonFile" : "target-carla_waypoint_types__py-0ade95399fcfee4d220f.json",
+					"name" : "carla_waypoint_types__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types__rosidl_generator_c-0ab8092bc28a19fb6fba.json",
+					"name" : "carla_waypoint_types__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types__rosidl_generator_py-11ad7d3bd7f7d601ba21.json",
+					"name" : "carla_waypoint_types__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types__rosidl_typesupport_c-f146800fbefe42f2e1a5.json",
+					"name" : "carla_waypoint_types__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types__rosidl_typesupport_c__pyext-d36f324f505928d6e5e9.json",
+					"name" : "carla_waypoint_types__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types__rosidl_typesupport_cpp-81f74545e2eab33995ec.json",
+					"name" : "carla_waypoint_types__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types__rosidl_typesupport_fastrtps_c-7016fa1d01e1ce550355.json",
+					"name" : "carla_waypoint_types__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types__rosidl_typesupport_fastrtps_c__pyext-ba9f4e86d8f8be8cd80d.json",
+					"name" : "carla_waypoint_types__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types__rosidl_typesupport_fastrtps_cpp-104218e51e8c03935f9e.json",
+					"name" : "carla_waypoint_types__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types__rosidl_typesupport_introspection_c-6b3138710600687f869d.json",
+					"name" : "carla_waypoint_types__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types__rosidl_typesupport_introspection_c__pyext-6055ae3f363499dfcb8a.json",
+					"name" : "carla_waypoint_types__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types__rosidl_typesupport_introspection_cpp-6897a47ce26656d94e65.json",
+					"name" : "carla_waypoint_types__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_waypoint_types_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_waypoint_types_uninstall-5eceaa6c3247885f8aef.json",
+					"name" : "carla_waypoint_types_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-690ca8b9399d7f7411e9.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_waypoint_types",
+		"source" : "/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/src/carla_waypoint_types"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

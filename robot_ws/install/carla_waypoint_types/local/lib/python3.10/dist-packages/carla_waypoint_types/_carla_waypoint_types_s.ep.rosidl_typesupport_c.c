@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/build/carla_waypoint_types/rosidl_generator_py/carla_waypoint_types/_carla_waypoint_types_s.ep.rosidl_typesupport_c.c

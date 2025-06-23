@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/robot_ws/src/carla_ros/carla_waypoint_publisher/launch/carla_waypoint_publisher.launch.py
