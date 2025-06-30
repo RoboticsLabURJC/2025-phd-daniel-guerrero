@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_waypoint_types/rosidl_generator_c/carla_waypoint_types/msg/carla_waypoint.h

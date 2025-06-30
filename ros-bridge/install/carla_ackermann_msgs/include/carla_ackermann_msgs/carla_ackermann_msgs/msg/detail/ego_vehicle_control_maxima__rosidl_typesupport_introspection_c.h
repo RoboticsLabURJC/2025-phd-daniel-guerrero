@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_ackermann_msgs/rosidl_typesupport_introspection_c/carla_ackermann_msgs/msg/detail/ego_vehicle_control_maxima__rosidl_typesupport_introspection_c.h

@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_ackermann_msgs/rosidl_generator_py/carla_ackermann_msgs/msg/_ego_vehicle_control_current.py

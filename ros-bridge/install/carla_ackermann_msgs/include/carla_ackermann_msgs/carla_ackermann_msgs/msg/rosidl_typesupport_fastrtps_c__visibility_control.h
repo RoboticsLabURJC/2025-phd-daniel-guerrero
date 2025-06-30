@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_ackermann_msgs/rosidl_typesupport_fastrtps_c/carla_ackermann_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h

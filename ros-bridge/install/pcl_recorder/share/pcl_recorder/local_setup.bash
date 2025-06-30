@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/pcl_recorder/ament_cmake_environment_hooks/local_setup.bash

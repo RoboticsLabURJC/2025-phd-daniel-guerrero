@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/install/rviz_carla_plugin/lib/librviz_carla_plugin.so

@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_ros_bridge/launch/carla_ros_bridge_with_example_ego_vehicle.launch.py

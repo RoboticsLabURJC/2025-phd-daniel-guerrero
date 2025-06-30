@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/src/carla_ros_scenario_runner_types/msg/CarlaScenario.msg

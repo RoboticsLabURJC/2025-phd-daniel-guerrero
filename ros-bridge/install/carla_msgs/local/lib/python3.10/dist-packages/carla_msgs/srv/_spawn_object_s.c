@@ -1,1 +1,0 @@
-/home/daniel/code/2025-phd-daniel-guerrero/ros-bridge/build/carla_msgs/rosidl_generator_py/carla_msgs/srv/_spawn_object_s.c
