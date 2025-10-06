@@ -9,27 +9,43 @@ import numpy as np
 # ------------------ Dataset personalizado ------------------
 class CarlaDataset(Dataset):
     def __init__(self, csv_path, img_root_dir):
+        # Lee y normaliza nombres de columnas
         self.data = pd.read_csv(csv_path)
+        self.data.columns = self.data.columns.str.strip().str.lower()
+
+        # Valida columnas requeridas
+        required = {'frame', 'steer', 'throttle', 'brake'}
+        missing = required - set(self.data.columns)
+        if missing:
+            raise KeyError(f"Faltan columnas en el CSV: {missing}. "
+                           f"Encontradas: {list(self.data.columns)}")
+
         self.img_root_dir = img_root_dir
+
+        # Opcional: precomputar rutas y labels (más eficiente y evita chained indexing)
+        self.paths = [os.path.join(self.img_root_dir, p) for p in self.data['frame'].astype(str)]
+        self.labels = self.data[['steer', 'throttle', 'brake']].astype('float32').to_numpy()
 
     def __len__(self):
         return len(self.data)
 
     def __getitem__(self, idx):
-        img_path = os.path.join(self.img_root_dir, self.data.iloc[idx]['seg_path'])
-        image = cv2.imread(img_path)
+        img_path = self.paths[idx]
+
+        image = cv2.imread(img_path)  # BGR
         if image is None:
             raise FileNotFoundError(f"No se pudo cargar la imagen: {img_path}")
+
         image = cv2.resize(image, (200, 66))
         image = image.astype(np.float32) / 255.0
-        image = np.transpose(image, (2, 0, 1))  # (C, H, W)
-        image_tensor = torch.tensor(image)
+        # Convierte BGR->RGB (opcional, si tu entrenamiento lo asume en RGB)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-        label = torch.tensor([
-            self.data.iloc[idx]['steer'],
-            self.data.iloc[idx]['throttle'],
-            self.data.iloc[idx]['brake']
-        ], dtype=torch.float32)
+        # (C, H, W)
+        image = np.transpose(image, (2, 0, 1))
+        image_tensor = torch.from_numpy(image)  # dtype=float32 ya
+
+        label = torch.from_numpy(self.labels[idx])  # shape (3,)
 
         return image_tensor, label
 
@@ -82,16 +98,16 @@ if __name__ == "__main__":
 
     # Entrenamiento
     for epoch in range(10):
-        total_loss = 0
+        total_loss = 0.0
         for imgs, labels in dataloader:
             preds = model(imgs)
             loss = criterion(preds, labels)
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-            total_loss += loss.item()
+            total_loss += float(loss.item())
         print(f"📦 Epoch {epoch+1} | Loss: {total_loss:.4f}")
 
     # Guardar modelo completo
     torch.save(model, "carla_model.pth")
-    print("✅ Modelo guardado como carla_model_opt.pth")
+    print("✅ Modelo guardado como carla_model.pth")
