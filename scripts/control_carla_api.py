@@ -53,7 +53,19 @@ def main():
     client = carla.Client(HOST, PORT)
     client.set_timeout(5.0)
 
-    world = client.get_world()
+    # --- Cargar un mapa específico ---
+    DESIRED_MAP = "Town01"  # cambia aquí el nombre del mapa que quieras
+
+    # Comprueba el mapa actual
+    current_map = client.get_world().get_map().name
+
+    if DESIRED_MAP not in current_map:
+        print(f"[INFO] Cargando mapa {DESIRED_MAP}...")
+        world = client.load_world(DESIRED_MAP)
+    else:
+        print(f"[INFO] Ya estás en {DESIRED_MAP}")
+        world = client.get_world()
+
     original_settings = world.get_settings()
 
     vehicle = None
@@ -207,7 +219,7 @@ def main():
 
             # Limitar
             steer = float(np.clip(steer, -1.0, 1.0))
-            throttle = float(np.clip(throttle, 0.0, 1.0))
+            throttle = float(np.clip(throttle, 0.0, 1.0))/4
             brake = float(np.clip(brake, 0.0, 1.0))
 
             # Aplicar control

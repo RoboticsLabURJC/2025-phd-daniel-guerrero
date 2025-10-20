@@ -137,7 +137,7 @@ model = load_trenet(args.model_path)
 # ====== CARLA ======
 client = carla.Client(args.host, args.port)
 client.set_timeout(10.0)
-world = client.get_world()
+world = client.load_world("Town02")
 bp_lib = world.get_blueprint_library()
 
 veh_bps = bp_lib.filter("vehicle.tesla.model3")
