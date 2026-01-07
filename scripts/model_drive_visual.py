@@ -69,7 +69,7 @@ parser.add_argument("--steer_ema", type=float, default=0.2, help="Suavizado expo
 args = parser.parse_args()
 
 # ---------------- Modelo ----------------
-model = torch.load("carla_model.pth", map_location="cpu", weights_only=False)
+model = torch.load("carla_model_trenet.pth", map_location="cpu", weights_only=False)
 model.eval()
 
 # ---------------- CARLA ----------------

@@ -141,7 +141,7 @@ def main():
     camera.listen(lambda image: save_image_cb(image, writer, IMG_DIR))
 
     try:
-        dur_s = 60 * 20  # 20 minutos
+        dur_s = 60 * 5  #minutos
         print(f"[INFO] Grabando por {dur_s} s a {CAM_FPS} FPS (JPG q={JPG_QUALITY})…")
         time.sleep(dur_s)
 

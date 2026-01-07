@@ -9,7 +9,7 @@ from mpl_toolkits.mplot3d import Axes3D  # necesario para activar proyección 3D
 
 def main():
     # === 1) Cargar datos =====================================================
-    csv_path = "dataset/controls.csv"  # cambia el nombre si tu archivo se llama distinto
+    csv_path = "dataset/controls_balanced.csv"  # cambia el nombre si tu archivo se llama distinto
     df = pd.read_csv(csv_path)
 
     # Asumimos columnas 'steer' y 'throttle'

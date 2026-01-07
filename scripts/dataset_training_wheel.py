@@ -5,7 +5,9 @@ import pandas as pd
 import os
 import cv2
 import numpy as np
+from torchvision import models, transforms
 
+# ===================== DATASET =====================
 class CarlaDataset(Dataset):
     def __init__(self, csv_path, img_root_dir):
         self.data = pd.read_csv(csv_path)
@@ -14,90 +16,85 @@ class CarlaDataset(Dataset):
         required = {'frame', 'steer', 'throttle', 'brake'}
         missing = required - set(self.data.columns)
         if missing:
-            raise KeyError(f"Faltan columnas en el CSV: {missing}. "
-                           f"Encontradas: {list(self.data.columns)}")
+            raise KeyError(f"Faltan columnas: {missing}")
 
         self.img_root_dir = img_root_dir
-
         self.paths = [os.path.join(self.img_root_dir, p) for p in self.data['frame'].astype(str)]
         self.labels = self.data[['steer', 'throttle', 'brake']].astype('float32').to_numpy()
+
+        # Transformaciones (IMPORTANTE para MobileNet)
+        self.transform = transforms.Compose([
+            transforms.ToPILImage(),
+            transforms.Resize((224, 224)),
+            transforms.ToTensor(),
+            transforms.Normalize(
+                mean=[0.485, 0.456, 0.406],   # Recomendación de ImageNet
+                std=[0.229, 0.224, 0.225]
+            )
+        ])
 
     def __len__(self):
         return len(self.data)
 
     def __getitem__(self, idx):
-        img_path = self.paths[idx]
+        img = cv2.imread(self.paths[idx])  # BGR
+        if img is None:
+            raise FileNotFoundError(f"No se pudo cargar {self.paths[idx]}")
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        img = self.transform(img)  # APLICA TRANSFORM
 
-        image = cv2.imread(img_path)  # BGR
-        if image is None:
-            raise FileNotFoundError(f"No se pudo cargar la imagen: {img_path}")
+        label = torch.from_numpy(self.labels[idx])  # (3,)
+        return img, label
 
-        image = cv2.resize(image, (200, 66))
-        image = image.astype(np.float32) / 255.0
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-
-        # (C, H, W)
-        image = np.transpose(image, (2, 0, 1))
-        image_tensor = torch.from_numpy(image)  # dtype=float32 ya
-
-        label = torch.from_numpy(self.labels[idx])  # shape (3,)
-
-        return image_tensor, label
-
-class CarlaPilotNet(nn.Module):
+# ===================== MODELO =====================
+class CarlaMobileNet(nn.Module):
     def __init__(self):
         super().__init__()
-        self.cnn = nn.Sequential(
-            nn.Conv2d(3, 24, kernel_size=5, stride=2),
-            nn.ReLU(),
-            nn.Conv2d(24, 36, kernel_size=5, stride=2),
-            nn.ReLU(),
-            nn.Conv2d(36, 48, kernel_size=5, stride=2),
-            nn.ReLU(),
-            nn.Conv2d(48, 64, kernel_size=3),
-            nn.ReLU(),
-            nn.Flatten()
-        )
+        self.base = models.mobilenet_v2(weights=models.MobileNet_V2_Weights.DEFAULT)
 
-        with torch.no_grad():
-            dummy = torch.zeros(1, 3, 66, 200)
-            flattened_size = self.cnn(dummy).shape[1]
+        # Congelar capas base si quieres transfer learning:
+        for param in self.base.features.parameters():
+            param.requires_grad = False
 
-        self.fc = nn.Sequential(
-            nn.Linear(flattened_size, 100),
-            nn.ReLU(),
-            nn.Linear(100, 50),
-            nn.ReLU(),
-            nn.Linear(50, 3)  # steer, throttle, brake
+        # Reemplazar último head para regresión
+        self.base.classifier = nn.Sequential(
+            nn.Dropout(0.2),
+            nn.Linear(self.base.last_channel, 3)  # steer, throttle, brake
         )
 
     def forward(self, x):
-        x = self.cnn(x)
-        return self.fc(x)
+        return self.base(x)
 
-# ------------------ Entrenamiento ------------------
+# ===================== ENTRENAMIENTO =====================
 if __name__ == "__main__":
-    # Rutas
-    csv_path = "dataset/controls.csv"
+    csv_path = "dataset/controls_balanced.csv"
     img_root_dir = "dataset/images"
 
-    dataset = CarlaDataset(csv_path, img_root_dir)
-    dataloader = DataLoader(dataset, batch_size=64, shuffle=True)
+    device = torch.device("cpu")  # Puedes cambiar si luego ROCm te detecta la GPU
 
-    model = CarlaPilotNet()
+    dataset = CarlaDataset(csv_path, img_root_dir)
+    dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
+
+    model = CarlaMobileNet().to(device)
+
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
     criterion = nn.MSELoss()
 
     for epoch in range(10):
         total_loss = 0.0
         for imgs, labels in dataloader:
+            imgs, labels = imgs.to(device), labels.to(device)
+
             preds = model(imgs)
             loss = criterion(preds, labels)
+
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-            total_loss += float(loss.item())
-        print(f"📦 Epoch {epoch+1} | Loss: {total_loss:.4f}")
 
-    torch.save(model, "carla_model.pth")
-    print("✅ Modelo guardado como carla_model.pth")
+            total_loss += loss.item()
+
+        print(f"📦 Epoch {epoch+1}/10 | Loss: {total_loss:.4f}")
+
+    torch.save(model, "carla_model_mobilenet.pth")
+    print("✅ Modelo guardado como carla_model_mobilenet.pth")
