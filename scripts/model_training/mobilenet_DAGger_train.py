@@ -102,7 +102,7 @@ class WeightedMSE(nn.Module):
 # ===================== ENTRENAMIENTO =====================
 def main():
     # Apunta a TU run
-    run_root_dir = "/home/daniel/code/2025-phd-daniel-guerrero/scripts/datasets_collection/dagger_runs/20260118_213338"
+    run_root_dir = "/home/daniel/code/2025-phd-daniel-guerrero/scripts/datasets_collection/dagger_runs/20260201_211356"
     csv_path = os.path.join(run_root_dir, "labels_balanced.csv")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -143,7 +143,7 @@ def main():
         print(f"Epoch {epoch+1}/{epochs} | Loss: {total_loss:.4f}")
 
     # Guardado recomendado: state_dict
-    out_path = os.path.join(run_root_dir, "carla_mobilenet_lane_following.pth")
+    out_path = os.path.join(run_root_dir, "carla_mobilenet_balance.pth")
     torch.save(model.state_dict(), out_path)
     print("✅ Modelo guardado en:", out_path)
 

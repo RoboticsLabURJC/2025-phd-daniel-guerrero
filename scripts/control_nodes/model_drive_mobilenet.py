@@ -83,7 +83,7 @@ parser.add_argument("--kickstart", type=float, default=0.15, help="Throttle mín
 parser.add_argument("--kick_speed", type=float, default=1.0, help="Umbral km/h para considerar 'parado'")
 parser.add_argument("--steer_ema", type=float, default=0.2, help="Suavizado exponencial del steer [0..1]")
 
-parser.add_argument("--weights", type=str, default="carla_mobilenet_lane_following.pth",
+parser.add_argument("--weights", type=str, default="carla_mobilenet_balance.pth",
                     help="Ruta al .pth (state_dict) del MobileNet entrenado")
 
 # Modo de salida:
@@ -104,7 +104,8 @@ model.eval()
 
 # ---------------- Preprocesado (igual a entrenamiento MobileNet) ----------------
 transform = transforms.Compose([
-    transforms.Resize((224, 224)),
+    transforms.Resize(256),
+    transforms.CenterCrop(224),
     transforms.ToTensor(),
     transforms.Normalize(
         mean=[0.485, 0.456, 0.406],
@@ -200,7 +201,7 @@ cam_bp.set_attribute("image_size_x", str(args.width))
 cam_bp.set_attribute("image_size_y", str(args.height))
 cam_bp.set_attribute("fov", str(args.fov))
 cam_bp.set_attribute("sensor_tick", str(1.0 / max(1, args.fps_sensor)))
-cam_tf = carla.Transform(carla.Location(x=1.5, z=2.4))
+cam_tf = carla.Transform(carla.Location(x=0.8, z=1.3))
 camera = world.spawn_actor(cam_bp, cam_tf, attach_to=vehicle)
 
 # ---------------- Estados compartidos ----------------
