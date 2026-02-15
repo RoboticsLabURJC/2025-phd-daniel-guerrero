@@ -1,4 +1,19 @@
 # control_carla_dagger_continuous_noise_csv.py
+"""
+CARLA manual driving + DAgger-style continuous action-noise dataset collection (CSV).
+
+Core idea (DAgger-style, "continuous noise"):
+- You drive the vehicle manually (steering wheel/pedals if available, otherwise keyboard).
+- The dataset label is ALWAYS the human "expert" command (clean, noise-free intent).
+- The control applied to the vehicle is expert + small Gaussian noise each tick (optional).
+  This forces the human to constantly correct small disturbances, generating robust data.
+
+Output:
+- Images saved to: dagger_runs/<run_id>/rgb/<step>.jpg
+- Labels saved to: dagger_runs/<run_id>/labels.csv
+  Each row includes expert controls, applied controls, and noise configuration.
+"""
+
 import os
 import time
 import csv
@@ -10,46 +25,68 @@ import numpy as np
 import pygame
 import carla
 
-# ---------- Parámetros ----------
+# -------------------- Connection / Simulation Parameters --------------------
 HOST = "127.0.0.1"
 PORT = 2000
 
+# Camera resolution and synchronous simulation tick rate
 IMG_W, IMG_H = 1280, 920
 CAM_FPS = 20
 
+# Keyboard driving parameters (how fast steering changes, throttle/brake increments)
 STEER_RATE = 2.5
 THROTTLE_STEP = 0.02
 BRAKE_STEP = 0.05
 
-# --- Mapeo volante/pedales ---
+
+# -------------------- Steering Wheel / Pedal Mapping --------------------
+# Axis indices depend on your specific wheel/pedal device.
 AXIS_STEER = 0
 AXIS_THROTTLE = 1
 AXIS_BRAKE = 2
 
+# Deadzones to avoid jitter near the neutral position
 DEADZONE_STEER = 0.02
 DEADZONE_PEDAL = 0.01
 
-# --- DAgger-style: continuous action noise injection + expert labeling ---
-# (Caso A: ruido pequeño en cada tick; etiqueta = experto)
-NOISE_STD_STEER = 0.05        # 0.02–0.10 típico
-NOISE_STD_THROTTLE = 0.01     # opcional, pequeño
-NOISE_STD_BRAKE = 0.00        # normalmente 0
-NOISE_ENABLED_DEFAULT = True  # arranca con ruido activo
+
+# -------------------- DAgger Continuous Noise Parameters --------------------
+# "Continuous noise" means: on every tick, applied_action = expert_action + N(0, std).
+# The label remains the expert action (clean).
+NOISE_STD_STEER = 0.05         # typical 0.02–0.10
+NOISE_STD_THROTTLE = 0.01      # optional small noise
+NOISE_STD_BRAKE = 0.00         # usually keep 0 (brake noise can be harsh)
+NOISE_ENABLED_DEFAULT = True   # start with noise enabled
 
 SAVE_JPEG_QUALITY = 90
-# -------------------------------
+# ------------------------------------------------------------------------
 
 
-def to_bgr(image: carla.Image):
+def to_bgr(image: carla.Image) -> np.ndarray:
+    """
+    Convert a CARLA BGRA image buffer into a BGR numpy array for OpenCV.
+
+    CARLA provides raw_data as BGRA (4 channels). OpenCV commonly uses BGR (3 channels),
+    so we drop the alpha channel.
+    """
     arr = np.frombuffer(image.raw_data, dtype=np.uint8).reshape(image.height, image.width, 4)
     return arr[:, :, :3]  # BGR
 
 
 def pedal_inverted_to_01(v: float, deadzone: float = 0.0) -> float:
     """
-    Convierte un valor de pedal en rango [1..-1] a [0..1]
-    1   -> 0.0 (no pisado)
-    -1  -> 1.0 (a fondo)
+    Convert an inverted pedal axis from [1..-1] to [0..1].
+
+    Many wheels/pedals report:
+      1.0  -> not pressed
+     -1.0  -> fully pressed
+
+    This maps:
+      1.0  -> 0.0
+     -1.0  -> 1.0
+
+    deadzone:
+      If v is very close to 1.0 (unpressed), snap to 1.0 to remove tiny noise.
     """
     v = float(np.clip(v, -1.0, 1.0))
     if v > 1.0 - deadzone:
@@ -58,11 +95,22 @@ def pedal_inverted_to_01(v: float, deadzone: float = 0.0) -> float:
 
 
 def axis_with_deadzone(v: float, dz: float) -> float:
+    """
+    Apply a symmetric deadzone to an axis value.
+
+    If abs(v) < dz, return 0.0, otherwise return v.
+    """
     v = float(np.clip(v, -1.0, 1.0))
     return 0.0 if abs(v) < dz else v
 
 
-def save_image(out_dir, step, frame_bgr):
+def save_image(out_dir: str, step: int, frame_bgr: np.ndarray) -> str:
+    """
+    Save one camera frame to disk as a JPEG.
+
+    Returns:
+      Relative image path (e.g., "rgb/000123.jpg") to store in the CSV label file.
+    """
     img_rel = f"rgb/{step:06d}.jpg"
     cv2.imwrite(
         os.path.join(out_dir, img_rel),
@@ -73,52 +121,56 @@ def save_image(out_dir, step, frame_bgr):
 
 
 def main():
+    # -------------------- Connect to CARLA --------------------
     client = carla.Client(HOST, PORT)
     client.set_timeout(5.0)
 
+    # Load desired map if needed
     DESIRED_MAP = "Town01"
     current_map = client.get_world().get_map().name
     if DESIRED_MAP not in current_map:
-        print(f"[INFO] Cargando mapa {DESIRED_MAP}...")
+        print(f"[INFO] Loading map {DESIRED_MAP}...")
         world = client.load_world(DESIRED_MAP)
     else:
-        print(f"[INFO] Ya estás en {DESIRED_MAP}")
+        print(f"[INFO] Already in {DESIRED_MAP}")
         world = client.get_world()
 
+    # Save original settings so we can restore them on exit
     original_settings = world.get_settings()
 
     vehicle = None
     camera = None
     image_queue = Queue()
 
-    # Inicializa pygame
+    # -------------------- Initialize pygame input --------------------
     pygame.init()
     pygame.joystick.init()
+
     joystick = None
     if pygame.joystick.get_count() > 0:
         joystick = pygame.joystick.Joystick(0)
         joystick.init()
         print(
-            f"[INFO] Joystick: {joystick.get_name()} | Ejes: {joystick.get_numaxes()} | Botones: {joystick.get_numbuttons()}"
+            f"[INFO] Joystick: {joystick.get_name()} | "
+            f"Axes: {joystick.get_numaxes()} | Buttons: {joystick.get_numbuttons()}"
         )
     else:
-        print("[INFO] No hay joystick/volante. Usa teclado: W/S/A/D, SPACE (freno), R (reversa), Q (salir)")
+        print("[INFO] No joystick/wheel found. Keyboard controls: W/S/A/D, SPACE (brake), R (reverse), Q (quit)")
 
-    # --- Carpeta de salida ---
+    # -------------------- Output directory and CSV setup --------------------
     run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
     out_dir = os.path.join("dagger_runs", run_id)
     os.makedirs(os.path.join(out_dir, "rgb"), exist_ok=True)
 
-    # CSV
     log_path = os.path.join(out_dir, "labels.csv")
-    print(f"[INFO] Guardando dataset (continuous noise) en: {out_dir}")
+    print(f"[INFO] Saving dataset (continuous noise) to: {out_dir}")
 
-    # Estado
+    # Runtime state
     step = 0
     record_enabled = True
     noise_enabled = bool(NOISE_ENABLED_DEFAULT)
 
-    # Escribir header CSV
+    # Write CSV header
     with open(log_path, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow([
@@ -134,7 +186,8 @@ def main():
         ])
 
     try:
-        # ----- Modo síncrono -----
+        # -------------------- Enable synchronous mode --------------------
+        # We run the simulator with fixed time steps for consistent data capture.
         settings = world.get_settings()
         settings.synchronous_mode = True
         settings.fixed_delta_seconds = 1.0 / CAM_FPS
@@ -143,7 +196,7 @@ def main():
 
         bp_lib = world.get_blueprint_library()
 
-        # ----- Vehículo -----
+        # -------------------- Spawn vehicle --------------------
         vehicle_bp = bp_lib.find("vehicle.tesla.model3")
         if vehicle_bp.has_attribute("role_name"):
             vehicle_bp.set_attribute("role_name", "ego")
@@ -154,9 +207,9 @@ def main():
             if vehicle:
                 break
         if vehicle is None:
-            raise RuntimeError("No se pudo spawnear el vehículo (mapa sin puntos libres).")
+            raise RuntimeError("Could not spawn the vehicle (no free spawn points).")
 
-        # ----- Cámara RGB -----
+        # -------------------- Attach RGB camera sensor --------------------
         cam_bp = bp_lib.find("sensor.camera.rgb")
         cam_bp.set_attribute("image_size_x", str(IMG_W))
         cam_bp.set_attribute("image_size_y", str(IMG_H))
@@ -169,25 +222,26 @@ def main():
 
         cv2.namedWindow("CAM", cv2.WINDOW_AUTOSIZE)
 
-        # Variables de control
+        # -------------------- Control variables --------------------
         steer = 0.0
         throttle = 0.0
         brake = 0.0
         reverse = False
         hand_brake = False
+
         control = carla.VehicleControl()
 
-        # Primer tick
+        # Prime the world once
         world.tick()
 
-        print("[INFO] Teclas: Q salir | R reversa | G toggle grabación | N toggle ruido")
+        print("[INFO] Keys: Q quit | R reverse | G toggle recording | N toggle noise")
 
         running = True
         while running:
-            # Tick sim (sincrónico)
+            # --------------- Advance simulation ---------------
             world.tick()
 
-            # Leer la imagen más reciente
+            # --------------- Get latest camera frame ---------------
             img = None
             while True:
                 try:
@@ -199,6 +253,7 @@ def main():
             if img is not None:
                 frame = to_bgr(img)
 
+                # Debug overlay: shows current recording/noise state
                 overlay = frame.copy()
                 status = [
                     f"record={record_enabled}",
@@ -206,39 +261,43 @@ def main():
                     f"std_steer={NOISE_STD_STEER}",
                 ]
                 cv2.putText(
-                    overlay, " | ".join(status),
-                    (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7,
-                    (255, 255, 255), 2
+                    overlay,
+                    " | ".join(status),
+                    (10, 30),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.7,
+                    (255, 255, 255),
+                    2
                 )
                 cv2.imshow("CAM", overlay)
                 cv2.waitKey(1)
 
-            # Eventos pygame
+            # --------------- Pygame events ---------------
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
 
             keys = pygame.key.get_pressed()
 
-            # toggle grabación (anti-rebote simple)
+            # Toggle recording (simple debounce via sleep)
             if keys[pygame.K_g]:
                 record_enabled = not record_enabled
                 print(f"[INFO] record_enabled -> {record_enabled}")
                 time.sleep(0.2)
 
-            # toggle ruido (anti-rebote simple)
+            # Toggle noise injection (simple debounce via sleep)
             if keys[pygame.K_n]:
                 noise_enabled = not noise_enabled
                 print(f"[INFO] noise_enabled -> {noise_enabled}")
                 time.sleep(0.2)
 
-            # Cerrar con Q
+            # Quit
             if keys[pygame.K_q]:
                 running = False
 
-            # --- Entrada humano (experto) ---
+            # -------------------- Read human "expert" input --------------------
             if joystick is None:
-                # Dirección
+                # ---- Keyboard steering ----
                 if keys[pygame.K_a]:
                     steer -= STEER_RATE * settings.fixed_delta_seconds
                 elif keys[pygame.K_d]:
@@ -246,7 +305,7 @@ def main():
                 else:
                     steer *= 0.9
 
-                # Acelerador / freno
+                # ---- Keyboard throttle / brake ----
                 if keys[pygame.K_w]:
                     throttle = min(1.0, throttle + THROTTLE_STEP)
                     brake = 0.0
@@ -260,45 +319,46 @@ def main():
                 if keys[pygame.K_SPACE]:
                     brake = 1.0
 
+                # Reverse toggle: hold R to set reverse; release when stopped
                 if keys[pygame.K_r]:
                     reverse = True
                 if not keys[pygame.K_r] and reverse and throttle == 0.0:
                     reverse = False
 
             else:
-                # volante
+                # ---- Wheel steering axis ----
                 try:
                     steer_val = joystick.get_axis(AXIS_STEER)
                 except Exception:
                     steer_val = 0.0
                 steer = axis_with_deadzone(steer_val, DEADZONE_STEER)
 
-                # acelerador
+                # ---- Throttle pedal ----
                 try:
                     accel_val = joystick.get_axis(AXIS_THROTTLE)
                 except Exception:
                     accel_val = 1.0
                 throttle = float(np.clip(pedal_inverted_to_01(accel_val, DEADZONE_PEDAL), 0.0, 1.0))
 
-                # freno
+                # ---- Brake pedal ----
                 try:
                     brake_val = joystick.get_axis(AXIS_BRAKE)
                 except Exception:
                     brake_val = 1.0
                 brake = float(np.clip(pedal_inverted_to_01(brake_val, DEADZONE_PEDAL), 0.0, 1.0))
 
-                # reversa con R
+                # Reverse with keyboard R
                 if keys[pygame.K_r]:
                     reverse = True
                 if not keys[pygame.K_r] and reverse and throttle == 0.0:
                     reverse = False
 
-            # Limitar entrada experto
+            # Clamp expert commands to valid ranges
             steer = float(np.clip(steer, -1.0, 1.0))
-            throttle = float(np.clip(throttle, 0.0, 1.0)) / 4.0  # tu escala original
+            throttle = float(np.clip(throttle, 0.0, 1.0)) / 4.0  # keep your original scaling
             brake = float(np.clip(brake, 0.0, 1.0))
 
-            # Etiqueta (lo correcto)
+            # Expert label (clean intent)
             expert = {
                 "steer": steer,
                 "throttle": throttle,
@@ -306,10 +366,13 @@ def main():
                 "reverse": bool(reverse),
             }
 
-            # ---------------------------------------------------------
-            # CASO A: Continuous noise injection (acción aplicada = expert + ruido)
-            # ---------------------------------------------------------
+            # ------------------------------------------------------------------
+            # Continuous noise injection:
+            # - Applied action is expert + Gaussian noise (if noise_enabled).
+            # - Labels remain the expert action.
+            # ------------------------------------------------------------------
             applied = dict(expert)
+
             if noise_enabled:
                 applied["steer"] = float(np.clip(
                     applied["steer"] + np.random.normal(0.0, NOISE_STD_STEER),
@@ -324,9 +387,7 @@ def main():
                     0.0, 1.0
                 ))
 
-            # ---------------------------------------------------------
-            # Aplicar control a CARLA
-            # ---------------------------------------------------------
+            # -------------------- Apply control to CARLA --------------------
             control.steer = float(np.clip(applied["steer"], -1.0, 1.0))
             control.throttle = float(np.clip(applied["throttle"], 0.0, 1.0))
             control.brake = float(np.clip(applied["brake"], 0.0, 1.0))
@@ -334,9 +395,8 @@ def main():
             control.reverse = bool(applied["reverse"])
             vehicle.apply_control(control)
 
-            # ---------------------------------------------------------
-            # Guardar (imagen + CSV) con etiqueta = expert
-            # ---------------------------------------------------------
+            # -------------------- Save sample (image + CSV row) --------------------
+            # Note: label == expert, applied == what was actually executed.
             if record_enabled and (frame is not None):
                 img_rel = save_image(out_dir, step, frame)
 
@@ -363,12 +423,13 @@ def main():
                         NOISE_STD_THROTTLE,
                         NOISE_STD_BRAKE,
                     ])
+
                 step += 1
 
         cv2.destroyAllWindows()
 
     finally:
-        # Limpieza
+        # -------------------- Cleanup / restore settings --------------------
         try:
             if camera is not None:
                 camera.stop()
