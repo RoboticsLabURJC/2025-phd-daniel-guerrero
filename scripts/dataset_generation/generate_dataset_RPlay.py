@@ -11,7 +11,7 @@ import carla
 HOST = "127.0.0.1"
 PORT = 2000
 
-LOG_FILE_PATH = os.path.abspath("recording_20260222_200431.log") 
+LOG_FILE_PATH = os.path.abspath("recording_20260308_202152.log") 
 OUT_DIR = "dataset_extraido"
 
 IMG_W, IMG_H = 640, 360
