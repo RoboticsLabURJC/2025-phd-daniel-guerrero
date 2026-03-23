@@ -13,9 +13,9 @@ import carla
 # ---------- Parámetros de Inferencia ----------
 HOST = "127.0.0.1"
 PORT = 2000
-MODEL_PATH = "/home/daniel/code/2025-phd-daniel-guerrero/scripts/model_training/pilotnet_best.pth"
+MODEL_PATH = "/home/daniel/code/2025-phd-daniel-guerrero/scripts/inferencias/pilotnet_260322.pth"
 
-TARGET_SPEED_KMH = 15.0  
+TARGET_SPEED_KMH = 5.0  
 KP_THROTTLE = 0.25       
 KP_BRAKE = 0.5           
 
