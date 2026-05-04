@@ -10,7 +10,7 @@ from torchvision import transforms
 
 # ---------- Parámetros de Entrenamiento ----------
 DATA_DIR = "/home/daniel/code/2025-phd-daniel-guerrero/scripts/dataset_generation/dataset_extraido"
-CSV_FILE = os.path.join(DATA_DIR, "/home/daniel/code/2025-phd-daniel-guerrero/scripts/dataset_generation/dataset_extraido/driving_log.csv")
+CSV_FILE = os.path.join(DATA_DIR, "/home/daniel/code/2025-phd-daniel-guerrero/scripts/datasets_collection/dataset_extraido/driving_log_balanced.csv")
 BATCH_SIZE = 128
 EPOCHS = 30
 LEARNING_RATE = 1e-4
