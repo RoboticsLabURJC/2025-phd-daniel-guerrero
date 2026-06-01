@@ -1,0 +1,3 @@
+carlaEnv/
+scripts/dataset_generation/logs_dagger/
+*.log
