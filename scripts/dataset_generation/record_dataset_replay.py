@@ -12,8 +12,7 @@ import numpy as np
 HOST = "127.0.0.1"
 PORT = 2000
 
-LOG_FILE = "town01.log"   # asegúrate que este .log existe EN LA MISMA MÁQUINA del servidor CARLA
-
+LOG_FILE = "/home/daniel/code/2025-phd-daniel-guerrero/scripts/dataset_generation/logs_dagger/dagger_log_20260517_103207.log"  
 SAVE_PATH = "dataset_replay"
 IMG_DIR = os.path.join(SAVE_PATH, "images")
 CSV_PATH = os.path.join(SAVE_PATH, "dataset.csv")
