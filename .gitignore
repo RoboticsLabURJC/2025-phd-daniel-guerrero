@@ -1,3 +1,4 @@
 carlaEnv/
 scripts/dataset_generation/logs_dagger/
 *.log
+scripts/dataset_generation/contenido_del_log.txt
