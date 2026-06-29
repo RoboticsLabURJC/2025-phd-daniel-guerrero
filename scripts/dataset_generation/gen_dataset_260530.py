@@ -9,17 +9,17 @@ import re
 import glob
 from datetime import datetime
 
-# Directorio donde están todos tus logs
-LOGS_DIR = "/home/daniel/code/2025-phd-daniel-guerrero/scripts/dataset_generation/autopilot_dagger"
+LOGS_DIR = "/home/daniel/code/2025-phd-daniel-guerrero/scripts/dataset_generation/logs_dagger_expert"
 
 image_queue = queue.Queue()
 
 def process_image(image):
     raw_data = np.frombuffer(image.raw_data, dtype=np.dtype("uint8"))
     raw_data = np.reshape(raw_data, (image.height, image.width, 4))
-    image_rgb = raw_data[:, :, :3] 
+    # CARLA entrega los datos en BGRA, al tomar :3 nos quedamos con BGR, ideal para OpenCV
+    image_bgr = raw_data[:, :, :3] 
     cam_location = image.transform.location
-    image_queue.put((image.frame, image_rgb, cam_location))
+    image_queue.put((image.frame, image_bgr, cam_location, image.timestamp))
 
 def clear_queue(q):
     with q.mutex:
@@ -79,7 +79,6 @@ def main():
             frames_totales_grabados = int(match_frm.group(1))
             map_name_log = match_map.group(1).strip().split('/')[-1]
 
-            # --- ESCUDO ANTI-CRASHEOS (Evita división por cero) ---
             if frames_totales_grabados <= 0 or duracion_total <= 0:
                 print(f"[WARNING] Saltando {log_filename}: El log está vacío (0 segundos).")
                 continue
@@ -88,9 +87,8 @@ def main():
             total_frames_esperados = int(duracion_total / 0.1)
 
             if total_frames_esperados <= 0:
-                print(f"[WARNING] Saltando {log_filename}: El log es demasiado corto para extraer un solo frame útil.")
+                print(f"[WARNING] Saltando {log_filename}: El log es demasiado corto.")
                 continue
-            # --------------------------------------------------------
 
             current_map = world.get_map().name.split('/')[-1]
             if current_map != map_name_log:
@@ -109,7 +107,9 @@ def main():
             clear_queue(image_queue)
             
             client.replay_file(log_path, 0, 0, 0)
-            client.set_replayer_time_factor(20.0) 
+            
+            # --- CAMBIO 1: Reproducción en tiempo real (x1.0) ---
+            client.set_replayer_time_factor(1.0) 
 
             print(f"[INFO] Esperando vehículo en {map_name_log}...")
             ego_vehicle = None
@@ -137,21 +137,31 @@ def main():
             camera_bp.set_attribute('fov', '90')
             camera_bp.set_attribute('sensor_tick', '0.1') 
 
-            camera_transform = carla.Transform(carla.Location(x=0.4, y=-0.3, z=1.3))
+            # --- CAMBIO 2: Posición central frontal (x=2.0 adelante, y=0.0 centro, z=1.4 altura del cofre) ---
+            camera_transform = carla.Transform(carla.Location(x=2.0, y=0.0, z=1.4))
             camera = world.spawn_actor(camera_bp, camera_transform, attach_to=ego_vehicle)
             camera.listen(lambda image: process_image(image))
 
-            print(f"[INFO] Extrayendo a x20 | Filtro: Descartar si Throttle==0 & Steering==0\n")
+            print(f"[INFO] Extrayendo en Tiempo Real | Filtro: Descartar si Throttle==0 & Steering==0")
+            print(f"[NOTA] Presiona la tecla 'q' en la ventana de video para saltar al siguiente log.\n")
             
             prev_location = None
             prev_frame_id = None
             frames_procesados_local = 0
             descartados_local = 0
+            start_sim_time = None 
 
             while True:
-                if not image_queue.empty():
-                    frame_id, image_rgb, current_location = image_queue.get()
+                try:
+                    frame_id, image_bgr, current_location, frame_timestamp = image_queue.get(timeout=0.1)
                     
+                    if start_sim_time is None:
+                        start_sim_time = frame_timestamp
+                        
+                    if (frame_timestamp - start_sim_time) >= duracion_total:
+                        print(f"\n[INFO] {log_filename} finalizado (Replay completado).")
+                        break
+
                     velocidad_kmh = 0.0
                     if prev_location is not None and prev_frame_id is not None:
                         frames_avanzados = frame_id - prev_frame_id
@@ -165,6 +175,14 @@ def main():
                     
                     control = ego_vehicle.get_control()
                     
+                    # --- CAMBIO 3: Mostrar la imagen en vivo en pantalla ---
+                    cv2.imshow("Vista Frontal de Recoleccion", image_bgr)
+                    
+                    # Permite a la ventana refrescarse y detecta si se presiona 'q'
+                    if cv2.waitKey(1) & 0xFF == ord('q'):
+                        print(f"\n[INFO] Salto manual activado. Cerrando log actual...")
+                        break
+
                     if abs(control.throttle) < 0.001 and abs(control.steer) < 0.001:
                         frames_descartados_global += 1
                         descartados_local += 1
@@ -172,7 +190,7 @@ def main():
                     else:
                         img_filename = f"{imagenes_guardadas_global:08d}.png" 
                         img_filepath = os.path.join(frames_dir, img_filename)
-                        cv2.imwrite(img_filepath, image_rgb)
+                        cv2.imwrite(img_filepath, image_bgr)
                         
                         rel_img_path = os.path.join("frames", img_filename)
                         csv_writer.writerow([
@@ -187,18 +205,18 @@ def main():
                         imagenes_guardadas_global += 1
                         frames_procesados_local += 1
 
-                    porcentaje = min((frames_procesados_local / total_frames_esperados) * 100, 100)
+                    porcentaje = min(((frame_timestamp - start_sim_time) / duracion_total) * 100, 100)
                     longitud_barra = 30
-                    llenos = int((longitud_barra * frames_procesados_local) // total_frames_esperados)
+                    llenos = int((longitud_barra * porcentaje) // 100)
                     barra = '█' * llenos + '-' * (longitud_barra - llenos)
                     
-                    print(f"\rProgreso Log: |{barra}| {porcentaje:.1f}% | Guardados: {imagenes_guardadas_global} | Descartados (Log): {descartados_local}  ", end='', flush=True)
+                    print(f"\rProgreso Log: |{barra}| {porcentaje:.1f}% | Guardados: {imagenes_guardadas_global} | Descartados: {descartados_local}  ", end='', flush=True)
 
-                    if frames_procesados_local >= total_frames_esperados:
-                        print(f"\n[INFO] {log_filename} finalizado.")
-                        break
+                except queue.Empty:
+                    continue
 
-            # Limpieza local CORREGIDA sin paréntesis en is_alive
+            # Limpieza de recursos locales
+            cv2.destroyAllWindows()
             if 'camera' in locals() and camera.is_alive:
                 camera.stop()
                 camera.destroy()
@@ -207,20 +225,19 @@ def main():
         print(f"\n{'='*60}")
         print(f"[ÉXITO TOTAL] Se procesaron {len(log_files)} logs.")
         print(f"Dataset Maestro generado con {imagenes_guardadas_global} imágenes útiles.")
-        print(f"Frames basura descartados en total: {frames_descartados_global}")
         print(f"{'='*60}")
 
     except KeyboardInterrupt:
         print(f"\n\n[INFO] Extracción interrumpida masivamente por el usuario.")
         print(f"Imágenes rescatadas hasta ahora: {imagenes_guardadas_global}")
     finally:
-        print("[INFO] Cerrando puertos y guardando dataset de forma segura...")
+        print("[INFO] Cerrando puertos y recursos...")
+        cv2.destroyAllWindows()
         client.stop_replayer(False) 
         
         if 'csv_file' in locals() and not csv_file.closed:
             csv_file.close()
             
-        # Limpieza global CORREGIDA sin paréntesis en is_alive
         if 'camera' in locals() and camera.is_alive:
             camera.stop()
             camera.destroy()

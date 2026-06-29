@@ -87,6 +87,7 @@ def main():
 
     blueprint_library = world.get_blueprint_library()
     vehicle_bp = blueprint_library.find('vehicle.tesla.model3')
+    vehicle_bp.set_attribute('role_name', 'ego_vehicle')
     
     # Instanciar vehículo en un punto de spawn válido de la autopista
     spawn_points = world.get_map().get_spawn_points()
