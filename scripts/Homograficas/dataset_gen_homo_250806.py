@@ -132,7 +132,7 @@ def main():
             client.stop_replayer(False) 
             clear_queue(image_queue)
             client.replay_file(log_path, 0, 0, 0)
-            client.set_replayer_time_factor(1.0) 
+            client.set_replayer_time_factor(0.3) 
 
             ego_vehicle = None
             intentos = 0
@@ -174,7 +174,8 @@ def main():
             start_sim_time = None 
             
             # Buffer para sincronizar frames asíncronos
-            frame_buffer = {}
+            latest_images = {}
+            frames_procesados_local = 0
 
             while True:
                 try:
@@ -186,15 +187,18 @@ def main():
                     if (frame_timestamp - start_sim_time) >= duracion_total:
                         break
 
-                    # Almacenar en el buffer por ID de frame
-                    if frame_id not in frame_buffer:
-                        frame_buffer[frame_id] = {'images': {}, 'loc': current_location, 'ts': frame_timestamp}
-                    
-                    frame_buffer[frame_id]['images'][cam_name] = image_bgr
+                    # Actualizar siempre con la imagen más reciente de esta cámara
+                    latest_images[cam_name] = image_bgr
 
-                    # Si tenemos las 4 imágenes de este frame exacto, procesamos el BEV
-                    if len(frame_buffer[frame_id]['images']) == 4:
-                        bev_image = stitch_bev(frame_buffer[frame_id]['images'], matrices_bev, bev_size)
+                    # En cuanto tengamos al menos una imagen de las 4 cámaras, procesamos continuamente
+                    if len(latest_images) == 4:
+                        bev_image = stitch_bev(latest_images, matrices_bev, bev_size)
+                        
+                        # (Opcional) Mostrar visualización cada 5 frames para no asfixiar el procesador
+                        if frames_procesados_local % 5 == 0:
+                            cv2.imshow("BEV Combinado en Vivo", bev_image)
+                            if cv2.waitKey(1) & 0xFF == ord('q'):
+                                break
                         
                         velocidad_kmh = 0.0
                         if prev_location is not None and prev_frame_id is not None:
@@ -208,10 +212,6 @@ def main():
                         prev_frame_id = frame_id
                         control = ego_vehicle.get_control()
                         
-                        cv2.imshow("BEV Combinado en Vivo", bev_image)
-                        if cv2.waitKey(1) & 0xFF == ord('q'):
-                            break
-
                         if abs(control.throttle) < 0.001 and abs(control.steer) < 0.001:
                             frames_descartados_global += 1
                         else:
@@ -225,11 +225,8 @@ def main():
                                 os.path.join("frames", img_filename), log_filename 
                             ])
                             imagenes_guardadas_global += 1
-
-                        # Limpieza de memoria (borrar frames viejos incompletos para no saturar la RAM)
-                        old_frames = [f for f in frame_buffer.keys() if f < frame_id - 5]
-                        for f in old_frames:
-                            del frame_buffer[f]
+                        
+                        frames_procesados_local += 1
 
                 except queue.Empty:
                     continue
