@@ -10,7 +10,7 @@ import glob
 from datetime import datetime
 
 # Directorio donde están todos tus logs
-LOGS_DIR = "/home/daniel/code/2025-phd-daniel-guerrero/scripts/dataset_generation/logs_dagger"
+LOGS_DIR = "/home/daniel/code/2025-phd-daniel-guerrero/scripts/dataset_generation/logs_dagger_expert"
 
 image_queue = queue.Queue()
 
