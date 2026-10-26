@@ -1,4 +1,11 @@
+# Virtual environments and caches
 carlaEnv/
-scripts/dataset_generation/logs_dagger/
+.venv/
+__pycache__/
+*.pyc
+
+# Datasets, raw recordings, and large binary files
+data/
 *.log
-scripts/dataset_generation/contenido_del_log.txt
+*.h5
+*.zip
