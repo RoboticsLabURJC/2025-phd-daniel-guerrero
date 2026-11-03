@@ -14,9 +14,10 @@ from tqdm import tqdm
 # 1. DATA LOADER (IMAGE AND STEERING ONLY - BEV)
 # ==========================================
 class DrivingDataset(Dataset):
-    def __init__(self, csv_file, frames_dir):
-        self.data = pd.read_csv(csv_file)
+    def __init__(self, dataframe, frames_dir, augment=False):
+        self.data = dataframe.reset_index(drop=True)
         self.frames_dir = frames_dir
+        self.augment = augment
 
         self.transform = transforms.Compose([
             transforms.ToPILImage(),
@@ -42,9 +43,15 @@ class DrivingDataset(Dataset):
             raise FileNotFoundError(f"Image not found: {img_path}")
 
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        image_tensor = self.transform(image)
+        steer_val = float(row["steering"])
 
-        steering_out = torch.tensor([row["steering"]], dtype=torch.float32)
+        # Aumento simétrico: 50% probabilidad de invertir horizontalmente imagen y ángulo
+        if self.augment and torch.rand(1).item() < 0.5:
+            image = cv2.flip(image, 1)
+            steer_val = -steer_val
+
+        image_tensor = self.transform(image)
+        steering_out = torch.tensor([steer_val], dtype=torch.float32)
         return image_tensor, steering_out
 
 
@@ -103,8 +110,8 @@ def weighted_steering_loss(pred_steering, true_steering, base_weight=1.0, curve_
 # 4. MAIN TRAINING LOOP
 # ==========================================
 def main():
-    CSV_FILE = "/home/daniel/code/2025-phd-daniel-guerrero/data/dataset_masivo_continuo/driving_log.csv"
-    FRAMES_DIR = "/home/daniel/code/2025-phd-daniel-guerrero/data/dataset_masivo_continuo/frames_homographic"
+    CSV_FILE = "/home/daniel/code/2025-phd-daniel-guerrero/data/dataset_masivo_continuo/driving_log_bev_best.csv"
+    FRAMES_DIR = "/home/daniel/code/2025-phd-daniel-guerrero/data/dataset_masivo_continuo/frames_bev_best"
     MODEL_SAVE_PATH = "/home/daniel/code/2025-phd-daniel-guerrero/models/bev/modelo_pilotnet_bev_steering_only.pth"
 
     BATCH_SIZE = 32
@@ -115,19 +122,26 @@ def main():
     print(f"[INFO] Using device: {device}")
     print(f"[INFO] Training PilotNet (Image Only) on BEV images: {FRAMES_DIR}")
 
-    dataset = DrivingDataset(csv_file=CSV_FILE, frames_dir=FRAMES_DIR)
+    df = pd.read_csv(CSV_FILE)
+    df_shuffled = df.sample(frac=1.0, random_state=42).reset_index(drop=True)
+    train_size = int(0.85 * len(df_shuffled))
+    df_train = df_shuffled.iloc[:train_size]
+    df_val = df_shuffled.iloc[train_size:]
 
-    train_size = int(0.8 * len(dataset))
-    val_size = len(dataset) - train_size
-    train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
+    train_dataset = DrivingDataset(df_train, frames_dir=FRAMES_DIR, augment=False)
+    val_dataset = DrivingDataset(df_val, frames_dir=FRAMES_DIR, augment=False)
 
-    train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, num_workers=4)
-    val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=4)
+    train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, num_workers=8, pin_memory=True)
+    val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=8, pin_memory=True)
 
     model = PilotNetSteeringOnly().to(device)
     optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode="min", factor=0.5, patience=2)
 
-    print(f"[INFO] Starting training for {EPOCHS} epochs...")
+    os.makedirs(os.path.dirname(MODEL_SAVE_PATH), exist_ok=True)
+    best_val_loss = float("inf")
+
+    print(f"[INFO] Starting training for {EPOCHS} epochs on {len(train_dataset)} train / {len(val_dataset)} val frames...")
 
     for epoch in range(EPOCHS):
         model.train()
@@ -135,8 +149,8 @@ def main():
 
         progress_bar = tqdm(train_loader, desc=f"Epoch {epoch + 1}/{EPOCHS} [Train BEV]")
         for images, steerings in progress_bar:
-            images = images.to(device)
-            steerings = steerings.to(device)
+            images = images.to(device, non_blocking=True)
+            steerings = steerings.to(device, non_blocking=True)
 
             optimizer.zero_grad()
             pred_steering = model(images)
@@ -152,8 +166,8 @@ def main():
         val_loss = 0.0
         with torch.no_grad():
             for images, steerings in val_loader:
-                images = images.to(device)
-                steerings = steerings.to(device)
+                images = images.to(device, non_blocking=True)
+                steerings = steerings.to(device, non_blocking=True)
 
                 pred_steering = model(images)
                 loss = weighted_steering_loss(pred_steering, steerings, curve_multiplier=12.0)
@@ -161,10 +175,15 @@ def main():
 
         avg_train_loss = train_loss / len(train_loader)
         avg_val_loss = val_loss / len(val_loader)
+        scheduler.step(avg_val_loss)
         print(f"Epoch {epoch + 1} Result | Train Loss: {avg_train_loss:.4f} | Val Loss: {avg_val_loss:.4f}")
 
-    torch.save(model.state_dict(), MODEL_SAVE_PATH)
-    print(f"\n[SUCCESS] PilotNet BEV model saved to: {MODEL_SAVE_PATH}")
+        if avg_val_loss < best_val_loss:
+            best_val_loss = avg_val_loss
+            torch.save(model.state_dict(), MODEL_SAVE_PATH)
+            print(f"  --> [BEST] Guardado mejor modelo (Val Loss: {best_val_loss:.4f}) en {MODEL_SAVE_PATH}")
+
+    print(f"\n[SUCCESS] Entrenamiento finalizado. Mejor Val Loss: {best_val_loss:.4f} en: {MODEL_SAVE_PATH}")
 
 
 if __name__ == "__main__":

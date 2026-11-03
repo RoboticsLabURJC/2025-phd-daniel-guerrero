@@ -93,8 +93,8 @@ def weighted_steering_loss(pred_steering, true_steering, base_weight=1.0, curve_
 def main():
     # --- CONFIGURACIÓN DE RUTAS ---
     # Ajusta a las rutas reales de tu dataset BEV
-    CSV_FILE = "/home/daniel/code/2025-phd-daniel-guerrero/data/dataset_masivo_continuo/driving_log.csv"
-    FRAMES_DIR = "/home/daniel/code/2025-phd-daniel-guerrero/data/dataset_masivo_continuo/frames_homographic" 
+    CSV_FILE = "/home/daniel/code/2025-phd-daniel-guerrero/data/dataset_masivo_continuo/driving_log_bev_best.csv"
+    FRAMES_DIR = "/home/daniel/code/2025-phd-daniel-guerrero/data/dataset_masivo_continuo/frames_bev_best" 
     
     BATCH_SIZE = 32
     EPOCHS = 15
@@ -163,7 +163,8 @@ def main():
         print(f"Resultado Época {epoch+1} | Train Loss: {avg_train_loss:.4f} | Val Loss: {avg_val_loss:.4f}")
 
     # Guardar los pesos finales
-    model_save_path = "modelo_resnet18_steering_only.pth"
+    model_save_path = "/home/daniel/code/2025-phd-daniel-guerrero/models/bev/modelo_resnet18_steering_only.pth"
+    os.makedirs(os.path.dirname(model_save_path), exist_ok=True)
     torch.save(model.state_dict(), model_save_path)
     print(f"\n[ÉXITO] Modelo simplificado guardado en: {model_save_path}")
 

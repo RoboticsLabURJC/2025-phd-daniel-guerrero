@@ -38,14 +38,43 @@ image_transform = transforms.Compose([
 ])
 
 # ==========================================
-# 2. CONFIGURACIÓN BEV Y SIMULADOR
+# 2. CONFIGURACIÓN BEV BIFOCAL Y SIMULADOR
 # ==========================================
-H_MATRIX = np.array([
-    [-1.38322388e-01, -8.80401482e-01,  4.42338059e+02],
-    [-4.51221359e-02, -2.59903503e+00,  1.07695709e+03],
-    [-5.42655982e-05, -2.67570238e-03,  1.00000000e+00]
-])
+IMG_WIDTH, IMG_HEIGHT = 1920, 1080
 BEV_WIDTH, BEV_HEIGHT = 600, 800
+
+def build_bifocal_bev_maps(img_w=IMG_WIDTH, img_h=IMG_HEIGHT, bev_w=BEV_WIDTH, bev_h=BEV_HEIGHT):
+    split_y = 0.45 * bev_h
+    p_left_seam = [0.39 * img_w, 0.385 * img_h]
+    p_right_seam = [0.61 * img_w, 0.385 * img_h]
+    p_left_bot = [-0.25 * img_w, 0.98 * img_h]
+    p_right_bot = [1.25 * img_w, 0.98 * img_h]
+
+    src_bot = np.float32([p_left_bot, p_right_bot, p_right_seam, p_left_seam])
+    dst_bot = np.float32([[0, bev_h], [bev_w, bev_h], [bev_w, split_y], [0, split_y]])
+    H_bot_inv = np.linalg.inv(cv2.getPerspectiveTransform(src_bot, dst_bot))
+
+    src_top = np.float32([p_left_seam, p_right_seam, [0.76 * img_w, 0.24 * img_h], [0.24 * img_w, 0.24 * img_h]])
+    dst_top = np.float32([[0, split_y], [bev_w, split_y], [bev_w, 0], [0, 0]])
+    H_top_inv = np.linalg.inv(cv2.getPerspectiveTransform(src_top, dst_top))
+
+    y_grid, x_grid = np.indices((bev_h, bev_w), dtype=np.float32)
+    coords = np.stack([x_grid, y_grid, np.ones_like(x_grid)], axis=-1).reshape(-1, 3)
+
+    c_bot = coords @ H_bot_inv.T
+    u_bot = (c_bot[:, 0] / c_bot[:, 2]).reshape(bev_h, bev_w)
+    v_bot = (c_bot[:, 1] / c_bot[:, 2]).reshape(bev_h, bev_w)
+
+    c_top = coords @ H_top_inv.T
+    u_top = (c_top[:, 0] / c_top[:, 2]).reshape(bev_h, bev_w)
+    v_top = (c_top[:, 1] / c_top[:, 2]).reshape(bev_h, bev_w)
+
+    alpha_blend = 1.0 / (1.0 + np.exp(-(y_grid - split_y) / 22.0))
+    map_x = (alpha_blend * u_bot + (1.0 - alpha_blend) * u_top).astype(np.float32)
+    map_y = (alpha_blend * v_bot + (1.0 - alpha_blend) * v_top).astype(np.float32)
+    return cv2.convertMaps(map_x, map_y, cv2.CV_16SC2)
+
+BEV_MAP1, BEV_MAP2 = build_bifocal_bev_maps()
 
 current_image = None
 
@@ -101,12 +130,10 @@ def main():
     try:
         while True:
             if current_image is not None:
-                # Ocultar horizonte antes de la transformación
                 img_copy = current_image.copy()
-                img_copy[:450, :] = 0 
                 
-                # Transformación BEV
-                bev_img = cv2.warpPerspective(img_copy, H_MATRIX, (BEV_WIDTH, BEV_HEIGHT))
+                # Transformación BEV Bifocal Universal
+                bev_img = cv2.remap(img_copy, BEV_MAP1, BEV_MAP2, interpolation=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
                 bev_rgb = cv2.cvtColor(bev_img, cv2.COLOR_BGR2RGB)
                 
                 img_tensor = image_transform(bev_rgb).unsqueeze(0).to(device) 
