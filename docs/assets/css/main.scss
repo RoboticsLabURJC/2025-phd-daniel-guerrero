@@ -7,3 +7,27 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* ==========================================================================
+   Custom Wide Layout (Expand content area & eliminate side gutter)
+   ========================================================================== */
+
+#main,
+.masthead__inner-wrap,
+.page__footer footer {
+  max-width: 1600px !important;
+}
+
+.page,
+.page__related {
+  @include breakpoint($large) {
+    padding-inline-end: 0 !important;
+    width: calc(100% - #{$right-sidebar-width-narrow}) !important;
+  }
+
+  @include breakpoint($x-large) {
+    padding-inline-end: 0 !important;
+    width: calc(100% - #{$right-sidebar-width}) !important;
+  }
+}
+
